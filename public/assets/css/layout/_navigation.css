@@ -1,0 +1,7 @@
+@import 'base/_variables.css';
+
+.navbar {
+    width: 100%;
+    height: 10%;
+    background-color: var(--color-primary);
+}

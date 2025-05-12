@@ -1,5 +1,26 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Main CSS entry file */
+
+/* Import Base */
+@import 'base/_reset.css';
+@import 'base/_typography.css';
+
+/* Import Layout Components */
+@import 'layout/_header.css';
+@import 'layout/_footer.css';
+@import 'layout/_grid.css';
+@import 'layout/_navigation.css';
+
+/* Import UI Components */
+@import 'components/_buttons.css';
+@import 'components/_cards.css';
+@import 'components/_forms.css';
+@import 'components/_alerts.css';
+
+/* Import Page-specific styles */
+@import 'pages/_home.css';
+@import 'pages/_about.css';
+@import 'pages/_contact.css';
+
+/* Utilities and Helpers */
+@import 'utils/_spacing.css';
+@import 'utils/_colors.css';

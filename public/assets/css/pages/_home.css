@@ -1,0 +1,24 @@
+/* Homepage specific styles */
+.hero-section {
+  background: linear-gradient(45deg, #3490dc, #6574cd);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.featured-products {
+  padding: 3rem 0;
+  background-color: #f8fafc;
+}
+
+.testimonials-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.cta-section {
+  background-color: #2d3748;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}

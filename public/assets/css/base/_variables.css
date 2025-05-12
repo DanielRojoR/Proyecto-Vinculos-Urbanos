@@ -1,45 +1,16 @@
 :root {
-
-/* LAYOUT */
-
-    /* Navbar variables */
-    --primary_navbar_color: ;
-    --secondary_navbar_color: ;
-
-/* COMPONENTS */
-
-    /* Button variables */
-    --primary_button_color: ;
-    --secondary_button_color: ;
-
-    /* Cards variables */
-    --primary_home_color: ;
-    --secondary_home_color: ;
-
-    /* form variables */
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
-    --primary_navbar_color: ;
+  --color-primary: #3490dc;
+  --color-secondary: #6574cd;
+  --color-success: #38c172;
+  --color-danger: #e3342f;
+  --color-warning: #f6993f;
+  --color-info: #6cb2eb;
+  
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  --border-radius: 4px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

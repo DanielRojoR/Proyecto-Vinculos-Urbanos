@@ -1,0 +1,29 @@
+/* Simple grid system */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.col-4 { width: 33.333%; }
+.col-6 { width: 50%; }
+.col-8 { width: 66.666%; }
+.col-12 { width: 100%; }
+
+@media (max-width: 768px) {
+  .col-4, .col-6, .col-8 {
+    width: 100%;
+  }
+}
