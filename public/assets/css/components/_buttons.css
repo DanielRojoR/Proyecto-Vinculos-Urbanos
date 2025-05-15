@@ -1,23 +1,64 @@
 /* Button styles */
 .btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 0.5rem 1.25rem;
-  border-radius: 4px;
+  margin: 0 0.25rem;
+  border-radius: var(--border-radius);
   font-weight: 500;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
+    svg {
+      margin-right: 10px;
+  }
 }
 
 .btn-primary {
-  background: #3490dc;
+  background-color: var(--color-btn-primary);
   color: white;
-  border: 1px solid #3490dc;
+}
+
+.btn-navbar {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  background-color:rgba(0, 0, 0, 0) ;
+  color: var(--color-primary);
+  svg {
+    fill: var(--color-btn-primary);
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.btn-navbar:hover {
+  color: white;
+  background-color: var(--color-light-1);
+  svg {
+    fill: white;
+  }
+}
+
+.btn-navbar-logo {
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--border-radius);
+  background-color:rgba(0, 0, 0, 0) ;
+  color: var(--color-primary);
+  transition: var(--transition);
 }
 
 .btn-primary:hover {
-  background: #2779bd;
-  border-color: #2779bd;
+  background: var(--color-light-1);
+  color: white;
+  svg {
+    fill: white;
+  }
+}
+
+.btn-dono {
+
 }
 
 .btn-outline {
@@ -32,4 +73,5 @@
 }
 
 .btn-sm { padding: 0.25rem 0.75rem; font-size: 0.875rem; }
+.btn-md { padding: 0.25rem 0.75rem; font-size: 0.875rem; }
 .btn-lg { padding: 0.75rem 1.5rem; font-size: 1.125rem; }

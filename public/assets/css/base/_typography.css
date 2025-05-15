@@ -16,9 +16,9 @@ h2 { font-size: 2rem; }
 h3 { font-size: 1.75rem; }
 h4 { font-size: 1.5rem; }
 
-p, ul, ol {
+/* p, ul, ol {
   margin-bottom: 1rem;
-}
+} */
 
 a {
   color: #0066cc;
