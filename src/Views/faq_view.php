@@ -1,0 +1,1 @@
+<h1>Pagina de FAQ</h1>

@@ -1,0 +1,7 @@
+@import 'base/_variables.css';
+
+.section {
+    width: 100%;
+    height: 70vh;
+    background-color: var(--color-brown-2);
+}
