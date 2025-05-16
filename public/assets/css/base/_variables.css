@@ -17,9 +17,9 @@
   --spacing-xl: 4rem;
 
   /* SCREEN SPACING */
-  --spacing-screen-sm: 10rem;
-  --spacing-screen-md: 14rem;
-  --spacing-screen-lg: 19rem;
+  --padding-screen-sm: 10rem;
+  --padding-screen-md: 14rem;
+  --padding-screen-lg: 19rem;
 
   /* MISC VARIABLES */
   --border-radius: 15px;

@@ -96,19 +96,29 @@
             <div>
                 <ul class="list-no-style-h">
                     <li>
-                        <a href="">1</a>
+                        <a href="">item 1</a>
                     </li>
                     <li>
-                        <a href="">2</a>
+                        <a href="">item 2</a>
                     </li>
                     <li>
-                        <a href="">3</a>
+                        <a href="">item 3</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="">
-
+        <div class="section">
+            <div class="section-left">
+                <div class="section-container">
+                    <p>Email: fundacionvinculosurbanos@gmail.com</p>
+                    <p>Fono: +56 9 1234 5678</p>
+                    <p>Dirección: </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106447.48167369292!2d-70.98002941013559!3d-33.51480488183225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dd285b2c673f%3A0xfcd19ca5936c866d!2sMaip%C3%BA%2C%20Maipu%2C%20Santiago%20Metropolitan%20Region!5e0!3m2!1sen!2scl!4v1747425700082!5m2!1sen!2scl" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="section-right">
+                
+            </div>
         </div>
     </main> 
 

@@ -4,7 +4,7 @@
     width: 100vw;
     height: 70px;
     background-color: var(--color-brown-4);
-    padding: 0 var(--spacing-screen-lg);
+    padding: 0 var(--padding-screen-lg);
     font-size: 20px;
     font-weight: bold;
     position: sticky;
