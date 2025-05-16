@@ -23,7 +23,7 @@
 
   /* MISC VARIABLES */
   --border-radius: 15px;
-  --box-shadow: 10 10px 10px rgba(0,0,0, 0.33);
+  --box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
   --transition: 150ms;
 
   /* MEDIA QUERY BREAKPOINTS */
@@ -31,4 +31,13 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+
+  /* TEXT VARIABLES */
+
+  --txt-sm: 0.5rem;
+  --txt-md: 1rem;
+  --txt-lg: 2rem;
+  --txt-xl: 4rem;
+  --txt-xxl: 6rem;
+  --txt-xxxl: 10rem;
 }

@@ -1,3 +1,18 @@
-.banner-section {
-    width: 100%;
+@import 'base/_variables.css';
+
+.banner {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner-vert {
+    flex-direction: column;
+}
+
+.banner-theme-1 {
+    background-color: var(--color-brown-4);
+    color: var(--color-brown-2);
 }

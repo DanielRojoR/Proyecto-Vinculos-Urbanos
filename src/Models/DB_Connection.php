@@ -24,7 +24,7 @@ class DB
         $this->dbName = getenv('DB_NAME');
     }
 
-    // singleton pattern
+    // aplicando singleton para la conexión a la db
     static function getInstance()
     {
         if(!self::$instance) {

@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\public\assets\css\main.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="\public\assets\images\favicon\favicon.ico" type="image/x-icon">
     <title>Fundación Vínculos Urbanos</title>
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-container">
+        <div class="navbar-container">  
             <div class="navbar-left">
                 <a class="btn-navbar-logo" href="">Vinculos Urbanos</a>
             </div>
@@ -35,8 +34,14 @@
                         </a>
                     </li>
                     <li>
-                        <a class="btn btn-sm btn-dono btn-hover" href="">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg>
+                        <div class="dropdown">
+                            <span class="btn btn-sm btn-dono btn-hover">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg>
+                            </span>
+                            <div class="dropdown-content">
+                                
+                            </div>
+                        </div>
                         </a>
                     </li>
                 </ul>
@@ -45,51 +50,61 @@
     </nav>
 
     <main>
-        <div class="section">
+        <div class="section section-theme-1">
             <div class="section-left">
                 <h1>Nuestra visión y misión</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
             </div >
             <div class="section-right">
-
+                <img src="..\public\assets\images\img\logo.png" alt="">
             </div>
         </div>
-        <div>
-            <div>
-                <P>Hazte parte y apoya nuestra causa</P>
+        <div class="banner banner-theme-1">
+            <div class="banner-left">
+                <h2>Hazte parte y apoya nuestra causa</h2>
             </div>
-            <div>
+            <div class="banner-right">
                 <button class="btn btn-md btn-dono btn-hover">Donar</button>
             </div>
         </div>
-        <div class="">
-            <div>
-
+        <div class="section">
+            <div class="section-left">
+                <img src="https://www.placehold.co/500x500" alt="">
             </div>
-            <div>
+            <div class="section-right">
                 <h1>Nuestra Historia</h1>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga odit placeat optio, perferendis dolores consequatur non quasi. Voluptatem, quia sed!
                 </p>
             </div>
         </div>
-                <div class="">
-            <div>
-
-            </div>
-            <div>
+        <div class="section">
+            <div class="section-left">
                 <h1>Que nos mueve</h1>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga odit placeat optio, perferendis dolores consequatur non quasi. Voluptatem, quia sed!
                 </p>
             </div>
+            <div class="section-right">
+                <img src="https://www.placehold.co/500x500" alt="">
+            </div>
         </div>
-        <div class="">
+        <div class="banner banner-vert banner-theme-1">
             <div>
                 <h1>Siguenos en nuestras redes</h1>
             </div>
             <div>
-
+                <ul class="list-no-style-h">
+                    <li>
+                        <a href="">1</a>
+                    </li>
+                    <li>
+                        <a href="">2</a>
+                    </li>
+                    <li>
+                        <a href="">3</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="">
