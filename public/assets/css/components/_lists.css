@@ -1,0 +1,5 @@
+.list-no-style-h {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}

@@ -1,13 +1,16 @@
 @import 'base/_variables.css';
 
 .navbar {
-    width: 100%;
+    width: 100vw;
     height: 70px;
-    background-color: var(--color-light-2);
-    padding: 0px 300px;
+    background-color: var(--color-brown-4);
+    padding: 0 var(--spacing-screen-lg);
     font-size: 20px;
     font-weight: bold;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;  
+    z-index: 100; 
+    box-shadow: var(--box-shadow);
 }
 
 .navbar-container {
@@ -27,7 +30,7 @@
 
 .navbar-left a {
     text-decoration: none;
-    color: var(--color-btn-primary);
+    color: var(--color-pink-1);
     padding: 15px 25px;
 }
 
@@ -56,4 +59,20 @@
     align-items: center;
     justify-content: space-between;
     list-style: none;
+}
+
+#active {
+    color: var(--color-pink-1);
+    text-decoration: underline;
+    svg {
+        fill: var(--color-pink-1);
+    }
+}
+
+#active:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+    svg {
+        fill: var(--color-white);
+    }
 }
