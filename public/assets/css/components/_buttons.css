@@ -15,7 +15,7 @@
 }
 
 .btn-primary {
-  background-color: var(--color-btn-primary);
+  background-color: var(--color-pink-1);
   color: white;
 }
 
@@ -23,10 +23,10 @@
   display: inline-block;
   font-size: 20px;
   font-weight: bold;
-  background-color:rgba(0, 0, 0, 0) ;
-  color: var(--color-primary);
+  background-color: var(--color-brown-3);
+  color: var(--color-brown-2);
   svg {
-    fill: var(--color-btn-primary);
+    fill: var(--color-brown-2);
     width: 32px;
     height: 32px;
   }
@@ -34,7 +34,7 @@
 
 .btn-navbar:hover {
   color: white;
-  background-color: var(--color-light-1);
+  background-color: var(--color-brown-3);
   svg {
     fill: white;
   }
@@ -50,7 +50,7 @@
 }
 
 .btn-primary:hover {
-  background: var(--color-light-1);
+  background: var(--color-pink-2);
   color: white;
   svg {
     fill: white;

@@ -34,31 +34,31 @@ class DB
         return self::$instance;
     }
 
-public function connect() {
-    try {
-        $this->connection = mysqli_connect($this->host,
-                                         $this->user,
-                                         $this->pass,
-                                         $this->dbName);
-        if (!$this->connection) {
-            throw new Exception(mysqli_connect_error());
+    public function connect() {
+        try {
+            $this->connection = mysqli_connect($this->host,
+                                            $this->user,
+                                            $this->pass,
+                                            $this->dbName);
+            if (!$this->connection) {
+                throw new Exception(mysqli_connect_error());
+            }
+        } 
+        
+        catch (Exception $e) {
+            // Se maneja y loggea el error
+            error_log("Database connection failed: " . $e->getMessage());
+            return false;
         }
-    } catch (Exception $e) {
-        // Se maneja y loggea el error
-        error_log("Database connection failed: " . $e->getMessage());
-        return false;
+        return true;
     }
-    return true;
-}
-
-public function isConnected() {
-    return $this->connection !== null && mysqli_ping($this->connection);
-}
-
-public function __destruct() {
-    if ($this->connection) {
-        mysqli_close($this->connection);
+    public function isConnected() {
+        return $this->connection !== null && mysqli_ping($this->connection);
     }
-}
 
+    public function __destruct() {
+        if ($this->connection) {
+            mysqli_close($this->connection);
+        }
+    }
 }

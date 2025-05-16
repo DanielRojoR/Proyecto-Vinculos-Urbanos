@@ -50,18 +50,6 @@
                 <h1>Nuestra visión y misión</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
             </div>
-            <?php 
-                require '../src/Models/DB_Connection.php';
-
-                // Get database instance
-                $db = DB::getInstance();
-
-                // Connect to database
-                if ($db->connect()) {
-                    // Database operations here
-                }
-            
-            ?>
         </div>
         <div class="">
             <div>
