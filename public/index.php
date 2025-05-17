@@ -97,7 +97,7 @@
             <div>
                 <ul class="list-no-style-h">
                     <li>
-                        <a href="">item 1</a>
+                        <a class="btn btn-md btn-rrss" href="">item 1</a>
                     </li>
                     <li>
                         <a href="">item 2</a>
@@ -118,7 +118,9 @@
                 </div>
             </div>
             <div class="section-right">
-                
+                <form action="">
+                    
+                </form>
             </div>
         </div>
     </main> 
