@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="\public\assets\images\favicon\favicon.ico" type="image/x-icon">
     <title>Fundación Vínculos Urbanos</title>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-container">
@@ -49,20 +50,46 @@
         </div>
     </nav>
     <main>
-        <div>
-            <div>
-
-            </div>
-            <div>
-
+        <div class="section section-theme-2">
+            <div class= "section">
+                <div class="section-left">
+                    <h1>Quienes somos</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
+                </div >
+                <div class="section-right">
+                    <img src="https://www.placehold.co/500x500" alt="">
+                </div>
             </div>
         </div>
-        <div>
-            <div>
+        <div class="section section-theme-2">
+            <div class= "section">
+                <div class="section-left">
+                    <img src="https://www.placehold.co/500x500" alt="">
+                </div>
+                <div class="section-right">
+                    <h1>Nuestro Objetivo</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
+                </div >
+            </div>
+        </div>  
 
+
+        <div class="section section-theme-3">
+            <div class="team-header">
+                <h2>Nuestro equipo</h2>
             </div>
             <div>
+                <div class="card">
+                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
+                </div>
+            </div>
+        </div>
 
+        <div class="section section-theme-2">
+            <div class="team-header-2">
+                <h2>Nuestro Directorio</h2>
+            </div>
+            <div>
             </div>
         </div>
         <div>
