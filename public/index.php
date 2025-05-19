@@ -90,20 +90,25 @@
                 <img src="https://www.placehold.co/500x500" alt="">
             </div>
         </div>
-        <div class="banner banner-vert banner-theme-1">
-            <div>
+        <div class="section section-height-md section-left-right-padding-xl section-content-align-center section-bg-color-b4">
+            <div class="section-container section-flex-column">
                 <h1>Siguenos en nuestras redes</h1>
-            </div>
-            <div>
+
                 <ul class="list-no-style-h">
                     <li>
-                        <a class="btn btn-md btn-rrss" href="">item 1</a>
+                        <a class="btn btn-md btn-rrss" href="">
+                            <img src="../public/assets/images/img/whatsapp_logo.png" alt="WhatsApp" width="45rem" height="45rem">
+                        </a>
                     </li>
                     <li>
-                        <a href="">item 2</a>
+                        <a class="btn btn-md btn-rrss" href="">
+                            <img src="../public/assets/images/img/instagram_logo.png" alt="WhatsApp" width="45rem" height="45rem">
+                        </a>
                     </li>
                     <li>
-                        <a href="">item 3</a>
+                        <a class="btn btn-md btn-rrss" href="">
+                            <img src="../public/assets/images/img/facebook_logo.png" alt="WhatsApp" width="45rem" height="45rem">
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -114,6 +119,8 @@
                     <p>Email: fundacionvinculosurbanos@gmail.com</p>
                     <p>Fono: +56 9 1234 5678</p>
                     <p>Dirección: </p>
+                </div>
+                <div class="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106447.48167369292!2d-70.98002941013559!3d-33.51480488183225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dd285b2c673f%3A0xfcd19ca5936c866d!2sMaip%C3%BA%2C%20Maipu%2C%20Santiago%20Metropolitan%20Region!5e0!3m2!1sen!2scl!4v1747425700082!5m2!1sen!2scl" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -148,8 +155,11 @@
 
             </div>
             <div class="footer-right">
-                <img src="" alt="">
-                <button class="btn btn-md btn-dono btn-hover">Donar</button>
+                <img style="max-width: 150px;" src="..\public\assets\images\img\logo.png" alt="">
+                <a href="../src/Views/donation_view.php">
+                    <button class="btn btn-md btn-dono btn-hover">Donar</button>
+                </a>
+                
             </div>
         </div>
     </footer>

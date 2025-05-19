@@ -1,81 +1,55 @@
 <?php
 
-namespace Controllers;
-
+require_once __DIR__ . '/../Models/financing_model.php';
 
 class FinancingController
 {
-    // Muestra la lista de financiamientos
-    public function index()
+    public function summaryByCausa(): void
     {
-        $financings = Financing::all();
-        View::render('financing/index', ['financings' => $financings]);
+        $summary = FinancingModel::getSummaryByCausa();
+        header(header: 'Content-Type: application/json');
+        echo json_encode(value: $summary);
     }
 
-    // Muestra el formulario para crear un nuevo financiamiento
-    public function create()
+    // Crear una nueva donación
+    public function createDonation(): void
     {
-        View::render('financing/create');
-    }
+        $data = json_decode(file_get_contents('php://input'), true);
 
-    // Guarda un nuevo financiamiento
-    public function store()
-    {
-        $data = [
-            'name' => $_POST['name'] ?? '',
-            'amount' => $_POST['amount'] ?? 0,
-            'description' => $_POST['description'] ?? ''
-        ];
-
-        $financing = new Financing($data);
-        if ($financing->save()) {
-            header('Location: /financing');
-            exit;
+        if (
+            isset($data['usuario_id']) &&
+            isset($data['causa_id']) &&
+            isset($data['monto']) &&
+            isset($data['metodo_de_pago']) &&
+            isset($data['anonimo'])
+        ) {
+            $result = FinancingModel::createDonation(
+                usuario_id: $data['usuario_id'],
+                causa_id: $data['causa_id'],
+                monto: $data['monto'],
+                metodo_de_pago: $data['metodo_de_pago'],
+                anonimo: $data['anonimo']
+            );
+            header(header: 'Content-Type: application/json');
+            echo json_encode(value: ['success' => $result]);
         } else {
-            View::render('financing/create', ['error' => 'Error al guardar']);
+            http_response_code(response_code: 400);
+            echo json_encode(value: ['error' => 'Datos incompletos']);
         }
     }
 
-    // Muestra el formulario para editar un financiamiento existente
-    public function edit($id)
+    public function donationsByUser($usuario_id): void
     {
-        $financing = Financing::find($id);
-        if (!$financing) {
-            header('Location: /financing');
-            exit;
-        }
-        View::render('financing/edit', ['financing' => $financing]);
+        $donations = FinancingModel::getDonationsByUser(usuario_id: $usuario_id);
+        header(header: 'Content-Type: application/json');
+        echo json_encode(value: $donations);
     }
 
-    // Actualiza un financiamiento existente
-    public function update($id)
+    public function donationById($donacion_id): void
     {
-        $financing = Financing::find($id);
-        if (!$financing) {
-            header('Location: /financing');
-            exit;
-        }
-
-        $financing->name = $_POST['name'] ?? $financing->name;
-        $financing->amount = $_POST['amount'] ?? $financing->amount;
-        $financing->description = $_POST['description'] ?? $financing->description;
-
-        if ($financing->save()) {
-            header('Location: /financing');
-            exit;
-        } else {
-            View::render('financing/edit', ['financing' => $financing, 'error' => 'Error al actualizar']);
-        }
-    }
-
-    // Elimina un financiamiento
-    public function delete($id)
-    {
-        $financing = Financing::find($id);
-        if ($financing) {
-            $financing->delete();
-        }
-        header('Location: /financing');
-        exit;
+        $donation = FinancingModel::getDonationById(donacion_id: $donacion_id);
+        header(header: 'Content-Type: application/json');
+        echo json_encode(value: $donation);
     }
 }
+?>

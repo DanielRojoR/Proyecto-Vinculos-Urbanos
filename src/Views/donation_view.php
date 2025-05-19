@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\..\public\assets\css\main.css">
-    <link rel="shortcut icon" href="..\..\public\assets\images\favicon\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="\public\assets\css\main.css">
+    <link rel="shortcut icon" href="\public\assets\images\favicon\favicon.ico" type="image/x-icon">
     <title>Fundación Vínculos Urbanos</title>
 </head>
 <body>
+
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-left">
                 <a class="btn-navbar-logo" href="../../public/index.php">Vinculos Urbanos</a>
-            </div>  
+            </div>
             <div class="navbar-right">
                 <ul>        
                     <li>
@@ -50,92 +51,28 @@
     </nav>
 
     <main>
-        <div class="section section-height-sm">
-            <div class= "section-container">
-                <div class="section-left section-left-alt">
-                    <h1>¿Quienes somos?</h1>
-                    <p>
-Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cruzando Fronteras”, activo desde 1998 en el barrio Sol Poniente de Maipú.</p>
-                </div>
-                <div class="section-right">
-                    <img src="https://www.placehold.co/350x350" alt="">
-                </div>
+        <div class="temp-section-container">
+            <div class="temp-information-donations">
+                <h1>¿Como puedes donarnos?</h1>
+                <p>Puedes donarnos transfiriendo desde tu cuenta bancaria y banco de preferencia.</p>
+                    <ul>
+                    <li>Fundacion Vinculos Urbanos</li>
+                    <li>Rut: 123.123.123-1</li>
+                    <li>Banco De Chile</li>
+                    <li>Cuenta Corriente</li>
+                    <li>Correo:</li>
+                    <li>N° cuenta:</li>
+                    </ul>
             </div>
-        </div>
-
-        <div class="section section-height-sm">
-            <div class= "section-container">
-                <div class="section-left">
-                    <img src="https://www.placehold.co/350x350" alt="">
-                </div>
-                <div class="section-right section-right-alt">
-                    <h1>Nuestro Objetivo</h1>
-                    <p>Formar una organización formal y estructurada para prevenir el consumo de sustancias en niños, niñas y adolescentes de sectores vulnerables, generando un impacto social a través de la intervención temprana, la educación y el trabajo comunitario.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="section section-color-br2 ">
-            <!-- <div class="section-team-title">
-                <h2>Nuestro equipo</h2>
-            </div> -->
-            <div class = "section-container">
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 1</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 2</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 3</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-                <!--  -->
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="card">
-                <div class="card-img-round">
-                    <img src="https://www.placehold.co/500x500" alt="">
-                </div>
-                <div class="card-title">
-                    <h1 style="color: var(--color-brown-2)">Director 1</h1>
-                </div>
-                <div class="card-subtitle"> 
-                    <h4 style="color: var(--color-brown-2)">CEO</h4>
-                </div>
+            <div class="temp-donation-button-section">
+                <h1>Cada ayuda cuenta!</h1>
+                <p>En esta parte puedes decidir si puedes ser un donante mensual o realizar una donacion unica.</p>
+                <button class="btn btn-md btn-dono btn-hover">Donar</button>
             </div>
         </div>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
                 <h2>Links</h2>
@@ -157,13 +94,8 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
                 <p>Desarrollado por Daniel R, Camila V, Samuel C</p>
 
             </div>
-            <div class="footer-right">
-                <img src="" alt="">
-                <button class="btn btn-md btn-dono btn-hover">Donar</button>
-            </div>
         </div>
     </footer>
     <script src="\public\assets\css\main.css"></script>
 </body>
-</html>    
-    
+</html>

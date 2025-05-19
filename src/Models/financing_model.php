@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../DB_Connection.php';
+
 class FinancingModel
 {
     private $db;
@@ -9,57 +11,56 @@ class FinancingModel
         $this->db = $db;
     }
 
-    // Obtener todos los financiamientos
-    public function getAllFinancings()
+    public static function getSummaryByCausa()
     {
-        $stmt = $this->db->prepare("SELECT * FROM financings");
+        $db = DB::getConnection();
+        $sql = "SELECT c.causa_id, c.nombre, SUM(d.monto) as total_recaudado
+                FROM Donaciones d
+                INNER JOIN Causa c ON d.causa_id = c.causa_id
+                GROUP BY c.causa_id, c.nombre";
+
+        $stmt = $db->prepare($sql);
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    // Obtener un financiamiento por ID
-    public function getFinancingById($id)
+    public static function createDonation($usuario_id, $causa_id, $monto, $metodo_de_pago, $anonimo)
     {
-        $stmt = $this->db->prepare("SELECT * FROM financings WHERE id = :id");
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $db = DB::getConnection();
+        $sql = "INSERT INTO Donaciones (usuario_id, causa_id, monto, fecha, metodo_de_pago, anonimo)
+                VALUES (?, ?, ?, NOW(), ?, ?)";
+
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param("iidsi", $usuario_id, $causa_id, $monto, $metodo_de_pago, $anonimo);
+        return $stmt->execute();
+    }
+
+    public static function getDonationsByUser($usuario_id)
+    {
+        $db = DB::getConnection();
+        $sql = "SELECT d.*, c.nombre as causa_nombre
+                FROM Donaciones d
+                INNER JOIN Causa c ON d.causa_id = c.causa_id
+                WHERE d.usuario_id = ?";
+
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param("i", $usuario_id);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    // Crear un nuevo financiamiento
-    public function createFinancing($data)
+    public static function getDonationById($donacion_id)
     {
-        $stmt = $this->db->prepare("
-            INSERT INTO financings (name, amount, description, created_at)
-            VALUES (:name, :amount, :description, NOW())
-        ");
-        $stmt->bindParam(':name', $data['name']);
-        $stmt->bindParam(':amount', $data['amount']);
-        $stmt->bindParam(':description', $data['description']);
-        return $stmt->execute();
-    }
+        $db = DB::getConnection();
+        $sql = "SELECT * FROM Donaciones WHERE donacion_id = ?";
 
-    // Actualizar un financiamiento existente
-    public function updateFinancing($id, $data)
-    {
-        $stmt = $this->db->prepare("
-            UPDATE financings
-            SET name = :name, amount = :amount, description = :description
-            WHERE id = :id
-        ");
-        $stmt->bindParam(':name', $data['name']);
-        $stmt->bindParam(':amount', $data['amount']);
-        $stmt->bindParam(':description', $data['description']);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        return $stmt->execute();
-    }
-
-    // Eliminar un financiamiento
-    public function deleteFinancing($id)
-    {
-        $stmt = $this->db->prepare("DELETE FROM financings WHERE id = :id");
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        return $stmt->execute();
+        $stmt = $db->prepare($sql);
+        $stmt->bind_param("i", $donacion_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_assoc();
     }
 }
 ?>

@@ -34,6 +34,13 @@ class DB
         return self::$instance;
     }
 
+    public static function getConnection()
+    {
+    $instance = self::getInstance();
+    $instance->connect();
+    return $instance->connection;
+    }
+
     public function connect() {
         try {
             $this->connection = mysqli_connect($this->host,
