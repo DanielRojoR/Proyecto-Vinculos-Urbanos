@@ -54,7 +54,8 @@
             <div class= "section-container">
                 <div class="section-left section-left-alt">
                     <h1>¿Quienes somos?</h1>
-                    <p></p>
+                    <p>
+Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cruzando Fronteras”, activo desde 1998 en el barrio Sol Poniente de Maipú.</p>
                 </div>
                 <div class="section-right">
                     <img src="https://www.placehold.co/350x350" alt="">

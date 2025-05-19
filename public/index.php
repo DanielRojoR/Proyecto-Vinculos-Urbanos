@@ -115,7 +115,7 @@
             </div>
         </div>
         <div class="section">
-            <div class="section-left section-color-br2 round-corner-contactus">
+            <div class="section-left round-corner-contactus">
                 <div class="section-container-temp">
                     <p>Email: fundacionvinculosurbanos@gmail.com</p>
                     <p>Fono: +56 9 1234 5678</p>

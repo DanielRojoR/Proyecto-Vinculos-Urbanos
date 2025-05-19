@@ -69,12 +69,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0.5rem;
-    width: 100%;  
+    width: 100%;    
 }
 
 .round-corner-contactus{
     border-radius: 5% 5% 0% 0%;
-    margin: 10%;
-    gap: 1rem;
     padding: 20px;
+    margin-top: auto;
+    background-color: var( --color-brown-3);
 }
