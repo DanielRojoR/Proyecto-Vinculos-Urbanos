@@ -1,6 +1,6 @@
 /* Card component */
 .card {
-  background: white;
+  background: rgb(240, 240, 240);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -13,6 +13,16 @@
 
 .card-body {
   padding: 1.5rem;
+  text-align: center;
+  color : var(--color-brown-2);
+}
+
+.card-body h3 {
+  color: var(--color-brown-2); 
+}
+
+.card-body p {
+  color: var(--color-brown-2);
 }
 
 .card-footer {
@@ -24,4 +34,11 @@
 .card-img-top {
   width: 100%;
   height: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 2rem;
 }
