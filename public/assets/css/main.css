@@ -24,7 +24,7 @@
 /* Import Page-specific styles */
 @import 'pages/_home.css';
 @import 'pages/_about.css';
-@import 'pages/_contact.css';
+@import 'pages/_index.css';
 
 /* Utilities and Helpers */
 @import 'utils/_spacing.css';

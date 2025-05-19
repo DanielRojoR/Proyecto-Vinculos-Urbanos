@@ -51,10 +51,10 @@
     </nav>
 
     <main>
-        <div class="section section-color-br2">
+        <div class="section section-theme-1">
             <div class="section-left">
                 <h1>Nuestra visión y misión</h1>
-                <p>Nuestra fundación sin fines de lucro tiene como propósito contribuir a la transformación social de comunidades vulnerables, enfocándose en la prevención del consumo de sustancias en niños, niñas y adolescentes. A través del trabajo territorial, la educación emocional y la participación activa de la comunidad, buscamos generar entornos más seguros y protectores. Aspiramos a ser una organización referente a nivel nacional en la prevención de riesgos psicosociales, destacando por nuestro compromiso, cercanía y el impacto positivo y sostenible en las nuevas generaciones.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
             </div >
             <div class="section-right">
                 <img src="..\public\assets\images\img\logo.png" alt="">
@@ -65,37 +65,35 @@
                 <h2>Hazte parte y apoya nuestra causa</h2>
             </div>
             <div class="banner-right">
-                <a href="../src/Views/donation_view.php">
-                <button class="btn btn-md btn-dono btn-hover">Donar</button></a>
+                <button class="btn btn-md btn-dono btn-hover">Donar</button>
             </div>
         </div>
         <div class="section">
-            <div class="section-left card-img-round">
-                <img src="..\public\assets\images\img\group_photo.jpg" alt="" >
+            <div class="section-left">
+                <img src="https://www.placehold.co/500x500" alt="">
             </div>
             <div class="section-right">
-                <h1 style="color: var(--color-brown-2)">Nuestra Historia</h1>
-                <p style="color: var(--color-brown-2)">
-                    Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cruzando Fronteras”, activo desde 1998 en el barrio Sol Poniente de Maipú, una zona que con el tiempo se volvió más peligrosa y con un creciente consumo de drogas. Desde jóvenes, trabajaron en la prevención del consumo de sustancias en niños, niñas y adolescentes, llegando incluso a intervenir directamente con otros jóvenes del sector. Esta experiencia los hizo tomar conciencia de la magnitud del problema. Al crecer, comprendieron que para generar un impacto real era necesario contar con más recursos y colaboración de actores interesados, por lo que decidieron formar una institución más formal y sólida, con una misión y visión clara para abordar esta problemática a corto, mediano y largo plazo.
+                <h1>Nuestra Historia</h1>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga odit placeat optio, perferendis dolores consequatur non quasi. Voluptatem, quia sed!
                 </p>
             </div>
         </div>
         <div class="section">
             <div class="section-left">
-                <h1 style="color: var(--color-brown-2)">Que nos mueve</h1>
-                <p style="color: var(--color-brown-2)">
-                    Lo que nos mueve es el profundo compromiso con nuestra comunidad y el deseo de ofrecer a niños, niñas y adolescentes un futuro distinto al que muchos ven a su alrededor. Haber crecido en un entorno donde el riesgo era parte del día a día nos dio una visión clara del problema y, al mismo tiempo, una motivación auténtica: ser el cambio que no siempre estuvo presente para ellos. Nos inspira la esperanza de que, con apoyo, prevención y contención emocional, cada niño y niña pueda elegir un camino distinto, libre de violencia y consumo, y lleno de oportunidades reales.
+                <h1>Que nos mueve</h1>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga odit placeat optio, perferendis dolores consequatur non quasi. Voluptatem, quia sed!
                 </p>
             </div>
-            <div class="section-right card-img-round">
-                <img src="..\public\assets\images\img\pascua_eggs_photo.jpg" alt="">
+            <div class="section-right">
+                <img src="https://www.placehold.co/500x500" alt="">
             </div>
         </div>
-        <div class="banner banner-vert banner-theme-1">
-            <div>
+        <div class="section section-height-md section-left-right-padding-xl section-content-align-center section-bg-color-b4">
+            <div class="section-container section-flex-column">
                 <h1>Siguenos en nuestras redes</h1>
-            </div>
-            <div>
+
                 <ul class="list-no-style-h">
                     <li>
                         <a class="btn btn-md btn-rrss" href="">
@@ -116,8 +114,8 @@
             </div>
         </div>
         <div class="section">
-            <div class="section-left round-corner-contactus">
-                <div class="section-container-temp">
+            <div class="section-left">
+                <div class="section-container">
                     <p>Email: fundacionvinculosurbanos@gmail.com</p>
                     <p>Fono: +56 9 1234 5678</p>
                     <p>Dirección: </p>
@@ -126,10 +124,9 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106447.48167369292!2d-70.98002941013559!3d-33.51480488183225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dd285b2c673f%3A0xfcd19ca5936c866d!2sMaip%C3%BA%2C%20Maipu%2C%20Santiago%20Metropolitan%20Region!5e0!3m2!1sen!2scl!4v1747425700082!5m2!1sen!2scl" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div class="section-right ">
+            <div class="section-right">
                 <form action="">
-                    <h1>¡Contactanos!
-
+                    
                 </form>
             </div>
         </div>
@@ -158,7 +155,7 @@
 
             </div>
             <div class="footer-right">
-                <img src="" alt="">
+                <img style="max-width: 150px;" src="..\public\assets\images\img\logo.png" alt="">
                 <a href="../src/Views/donation_view.php">
                     <button class="btn btn-md btn-dono btn-hover">Donar</button>
                 </a>
