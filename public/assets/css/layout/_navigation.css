@@ -63,7 +63,6 @@
 
 #active {
     color: var(--color-pink-1);
-    text-decoration: underline;
     svg {
         fill: var(--color-pink-1);
     }
@@ -71,7 +70,6 @@
 
 #active:hover {
     color: var(--color-white);
-    text-decoration: underline;
     svg {
         fill: var(--color-white);
     }

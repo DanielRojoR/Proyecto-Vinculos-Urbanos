@@ -1,44 +1,38 @@
 /* Card component */
 .card {
-  background: rgb(240, 240, 240);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  width: var(--card-width-lg);
+  height: var(--card-height-lg);
+  color: var(--color-brown-4);
 }
 
-.card-header {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #eaeaea;
+.card-img img{
+  
 }
 
-.card-body {
-  padding: 1.5rem;
-  text-align: center;
-  color : var(--color-brown-2);
+.card-img-round img{
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-round);
+  box-shadow: var(--box-shadow);
 }
 
-.card-body h3 {
-  color: var(--color-brown-2); 
-}
-
-.card-body p {
-  color: var(--color-brown-2);
-}
-
-.card-footer {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid #eaeaea;
-  background: #f9f9f9;
-}
-
-.card-img-top {
-  width: 100%;
-  height: auto;
-}
-
-.card-container {
+.card-title {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title h1{
+  font-weight: 300;
+  margin: 0;
+}
+
+.card-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-subtitle h4{
+  font-size: 1.25rem;
+  font-weight: 300;
 }

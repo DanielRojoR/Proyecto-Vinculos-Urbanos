@@ -49,81 +49,66 @@
             </div>
         </div>
     </nav>
+
     <main>
-        <div class="section section-theme-2">
-            <div class= "section">
-                <div class="section-left">
+        <div class="section section-height-sm">
+            <div class= "section-container">
+                <div class="section-left section-left-alt">
                     <h1>Quienes somos</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
-                </div >
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum numquam cupiditate amet, illum veniam sed est aperiam perspiciatis rerum iste, deleniti magni totam voluptates? Assumenda voluptatibus quaerat ab repellendus.</p>
+                </div>
                 <div class="section-right">
-                    <img src="https://www.placehold.co/500x500" alt="">
+                    <img src="https://www.placehold.co/350x350" alt="">
                 </div>
             </div>
         </div>
-        <div class="section section-theme-2">
-            <div class= "section">
+
+        <div class="section section-height-sm">
+            <div class= "section-container">
                 <div class="section-left">
+                    <img src="https://www.placehold.co/350x350" alt="">
+                </div>
+                <div class="section-right section-right-alt">
+                    <h1>Quienes somos</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum numquam cupiditate amet, illum veniam sed est aperiam perspiciatis rerum iste, deleniti magni totam voluptates? Assumenda voluptatibus quaerat ab repellendus.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section section-color-br2 ">
+            <!-- <div class="section-team-title">
+                <h2>Nuestro equipo</h2>
+            </div> -->
+            <div class = "section">
+                <!--  -->
+                <div class="card">
+                    <div class="card-img-round">
+                        <img src="https://www.placehold.co/500x500" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h1>Pixulon rojo</h1>
+                    </div>
+                    <div class="card-subtitle">
+                        <h4>gay</h4>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="card">
+                <div class="card-img-round">
                     <img src="https://www.placehold.co/500x500" alt="">
                 </div>
-                <div class="section-right">
-                    <h1>Nuestro Objetivo</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
-                </div >
+                <div class="card-title">
+                    <h1>Pixulon rojo</h1>
+                </div>
+                <div class="card-subtitle">
+                    <h4>gay</h4>
+                </div>
             </div>
-        </div>  
-
-
-        <div class="section section-theme-3">
-            <div class="team-header">
-                <h2>Nuestro equipo</h2>
-            </div>
-
-            <div class = "card-container">
-                <div class="card">
-                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
-                    <h3 class="card-body h3">Daniel R.</h3>
-                    <p class="card-body">Desarrollador</p>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
-                    <h3 class="card-body h3">Camila V.</h3>
-                    <p class="card-body">Desarrollador</p>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
-                    <h3 class="card-body h3">Samuel C.</h3>
-                    <p class="card-body" p>?Desarrollador??</p>
-                </div>
-                
-            </div>
-        </div>
-
-        <div class="section section-theme-2">
-            <div class="team-header-2">
-                <h2>Nuestro Directorio</h2>
-            </div>
-            <div class = "card-container">
-                <div class="card">
-                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
-                    <h3 class="card-body h3">Daniel R.</h3>
-                    <p class="card-body">Desarrollador</p>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
-                    <h3 class="card-body h3">Camila V.</h3>
-                    <p class="card-body">Desarrollador</p>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
-                    <h3 class="card-body h3">Samuel C.</h3>
-                    <p class="card-body" p>?Desarrollador??</p>
-                </div>
-                
-            </div>
-        </div>
-        <div>
-
         </div>
     </main>
 

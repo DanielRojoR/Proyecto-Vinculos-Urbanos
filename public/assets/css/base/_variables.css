@@ -23,6 +23,7 @@
 
   /* MISC VARIABLES */
   --border-radius: 15px;
+  --border-radius-round: 50%;
   --box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
   --transition: 150ms;
 
@@ -40,4 +41,15 @@
   --txt-xl: 4rem;
   --txt-xxl: 6rem;
   --txt-xxxl: 10rem;
+
+  /* CARD SIZING */
+  --card-width-sm: 100px;
+  --card-width-md: 200px;
+  --card-width-lg: 300px;
+  --card-width-xl: 400px;
+
+  --card-height-sm: 200px;
+  --card-height-md: 350px;
+  --card-height-lg: 450px;
+  --card-height-xl: 550px;
 }
