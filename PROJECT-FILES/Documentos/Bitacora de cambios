@@ -1,0 +1,18 @@
+BITACORA DE LOS CAMBIOS Y COSAS QUE TENEMOS QUE ARREGLAR
+
+valores hardcoded en el archivo de estilos de secciones (public/css/layout/_section.css)
+
+.team-header {  
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    margin: 0;
+}
+
+.team-header-2 {  
+    position: absolute;
+    color: var(--color-brown-2);
+    top: 2rem;
+    right: 2rem;
+    margin: 0;
+}

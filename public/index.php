@@ -25,6 +25,7 @@
                         <a class="btn btn-sm btn-navbar" href="../src/Views/financing_view.php">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M444-200h70v-50q50-9 86-39t36-89q0-42-24-77t-96-61q-60-20-83-35t-23-41q0-26 18.5-41t53.5-15q32 0 50 15.5t26 38.5l64-26q-11-35-40.5-61T516-710v-50h-70v50q-50 11-78 44t-28 74q0 47 27.5 76t86.5 50q63 23 87.5 41t24.5 47q0 33-23.5 48.5T486-314q-33 0-58.5-20.5T390-396l-66 26q14 48 43.5 77.5T444-252v52Zm36 120q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
                             Financiamiento
+                            
                         </a>
                     </li>
                     <li>
@@ -96,19 +97,31 @@
             <div>
                 <ul class="list-no-style-h">
                     <li>
-                        <a href="">1</a>
+                        <a class="btn btn-md btn-rrss" href="">item 1</a>
                     </li>
                     <li>
-                        <a href="">2</a>
+                        <a href="">item 2</a>
                     </li>
                     <li>
-                        <a href="">3</a>
+                        <a href="">item 3</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="">
-
+        <div class="section">
+            <div class="section-left">
+                <div class="section-container">
+                    <p>Email: fundacionvinculosurbanos@gmail.com</p>
+                    <p>Fono: +56 9 1234 5678</p>
+                    <p>Dirección: </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106447.48167369292!2d-70.98002941013559!3d-33.51480488183225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dd285b2c673f%3A0xfcd19ca5936c866d!2sMaip%C3%BA%2C%20Maipu%2C%20Santiago%20Metropolitan%20Region!5e0!3m2!1sen!2scl!4v1747425700082!5m2!1sen!2scl" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="section-right">
+                <form action="">
+                    
+                </form>
+            </div>
         </div>
     </main> 
 
