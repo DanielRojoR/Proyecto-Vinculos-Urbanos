@@ -60,15 +60,6 @@
                 <img src="..\public\assets\images\img\logo.png" alt="">
             </div>
         </div>
-                <div class="section section-theme-1">
-            <div class="section-left">
-                <h1>Nuestra visión y misión</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
-            </div >
-            <div class="section-right">
-                <img src="..\public\assets\images\img\logo.png" alt="">
-            </div>
-        </div>
         <div class="banner banner-theme-1">
             <div class="banner-left">
                 <h2>Hazte parte y apoya nuestra causa</h2>

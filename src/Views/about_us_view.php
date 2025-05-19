@@ -80,8 +80,32 @@
             <!-- <div class="section-team-title">
                 <h2>Nuestro equipo</h2>
             </div> -->
-            <div class = "section">
+            <div class = "section-container">
                 <!--  -->
+                <div class="card">
+                    <div class="card-img-round">
+                        <img src="https://www.placehold.co/500x500" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h1>Pixulon rojo</h1>
+                    </div>
+                    <div class="card-subtitle">
+                        <h4>gay</h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img-round">
+                        <img src="https://www.placehold.co/500x500" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h1>Pixulon rojo</h1>
+                    </div>
+                    <div class="card-subtitle">
+                        <h4>gay</h4>
+                    </div>
+                </div>
+
                 <div class="card">
                     <div class="card-img-round">
                         <img src="https://www.placehold.co/500x500" alt="">
