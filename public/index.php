@@ -149,7 +149,10 @@
             </div>
             <div class="footer-right">
                 <img src="" alt="">
-                <button class="btn btn-md btn-dono btn-hover">Donar</button>
+                <a href="../src/Views/donation_view.php">
+                    <button class="btn btn-md btn-dono btn-hover">Donar</button>
+                </a>
+                
             </div>
         </div>
     </footer>

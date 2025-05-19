@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="\public\assets\images\favicon\favicon.ico" type="image/x-icon">
     <title>Fundación Vínculos Urbanos</title>
 </head>
-
 <body>
+
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-left">
@@ -49,122 +49,9 @@
             </div>
         </div>
     </nav>
-
     <main>
-        <div class="section section-height-sm">
-            <div class= "section-container">
-                <div class="section-left section-left-alt">
-                    <h1>Quienes somos</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum numquam cupiditate amet, illum veniam sed est aperiam perspiciatis rerum iste, deleniti magni totam voluptates? Assumenda voluptatibus quaerat ab repellendus.</p>
-                </div>
-                <div class="section-right">
-                    <img src="https://www.placehold.co/350x350" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="section section-height-sm">
-            <div class= "section-container">
-                <div class="section-left">
-                    <img src="https://www.placehold.co/350x350" alt="">
-                </div>
-                <div class="section-right section-right-alt">
-                    <h1>Quienes somos</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum numquam cupiditate amet, illum veniam sed est aperiam perspiciatis rerum iste, deleniti magni totam voluptates? Assumenda voluptatibus quaerat ab repellendus.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="section section-color-br2 ">
-            <!-- <div class="section-team-title">
-                <h2>Nuestro equipo</h2>
-            </div> -->
-            <div class = "section-container">
-                <!--  -->
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 1</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 2</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 3</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-                <!--  -->
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="card">
-                <div class="card-img-round">
-                    <img src="https://www.placehold.co/500x500" alt="">
-                </div>
-                <div class="card-title">
-                    <h1>Director 1</h1>
-                </div>
-                <div class="card-subtitle">
-                    <h4>CEO</h4>
-                </div>
-            </div>
+        <div class="temp-">
         </div>
     </main>
-
-        <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h2>Links</h2>
-                <ul>
-                    <li>
-                        <a href="">Preguntas frecuentes</a>
-                    </li>
-                    <li>
-                        <a href="">Términos y condiciones</a>
-                    </li>
-                    <li>
-                        <a href="">Sé voluntari@!</a>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="footer-center">
-                <p>Fundación Vínculos Urbanos</p>
-                <p>Desarrollado por Daniel R, Camila V, Samuel C</p>
-
-            </div>
-            <div class="footer-right">
-                <img src="" alt="">
-                <button class="btn btn-md btn-dono btn-hover">Donar</button>
-            </div>
-        </div>
-    </footer>
-    <script src="\public\assets\css\main.css"></script>
 </body>
-</html>    
-    
+</html>
