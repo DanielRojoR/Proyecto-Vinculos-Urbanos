@@ -78,10 +78,24 @@
             <div class="team-header">
                 <h2>Nuestro equipo</h2>
             </div>
-            <div>
+
+            <div class = "card-container">
                 <div class="card">
                     <img src="https://placehold.co/100x150" alt="" style="width:100%">
+                    <h3 class="card-body h3">Daniel R.</h3>
+                    <p class="card-body">Desarrollador</p>
                 </div>
+                <div class="card">
+                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
+                    <h3 class="card-body h3">Camila V.</h3>
+                    <p class="card-body">Desarrollador</p>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
+                    <h3 class="card-body h3">Samuel C.</h3>
+                    <p class="card-body" p>?Desarrollador??</p>
+                </div>
+                
             </div>
         </div>
 
@@ -89,7 +103,23 @@
             <div class="team-header-2">
                 <h2>Nuestro Directorio</h2>
             </div>
-            <div>
+            <div class = "card-container">
+                <div class="card">
+                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
+                    <h3 class="card-body h3">Daniel R.</h3>
+                    <p class="card-body">Desarrollador</p>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
+                    <h3 class="card-body h3">Camila V.</h3>
+                    <p class="card-body">Desarrollador</p>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/100x150" alt="" style="width:100%">
+                    <h3 class="card-body h3">Samuel C.</h3>
+                    <p class="card-body" p>?Desarrollador??</p>
+                </div>
+                
             </div>
         </div>
         <div>
