@@ -51,50 +51,57 @@
     </nav>
 
     <main>
-        <div class="section section-theme-1">
-            <div class="section-left">
-                <h1>Nuestra visión y misión</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
-            </div >
-            <div class="section-right">
-                <img src="..\public\assets\images\img\logo.png" alt="">
+        <div id="banner" class="section section-height-xl section-left-right-padding-lg section-content-align-center section-bg-color-b2">
+            <div class="section-container">
+                <div class="section-left">
+                    <h1>Nuestra visión y misión</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores at deleniti illo accusamus, doloremque eaque magnam cupiditate distinctio perferendis vitae sint corporis dignissimos? Voluptates modi placeat explicabo, fugiat minima molestias.</p>
+                </div >
+                <div class="section-right section-img-md section-content-align-center">
+                    <img src="..\public\assets\images\img\logo.png" alt="">
+                </div>
             </div>
         </div>
-        <div class="banner banner-theme-1">
-            <div class="banner-left">
-                <h2>Hazte parte y apoya nuestra causa</h2>
-            </div>
-            <div class="banner-right">
-                <button class="btn btn-md btn-dono btn-hover">Donar</button>
-            </div>
-        </div>
-        <div class="section">
-            <div class="section-left">
-                <img src="https://www.placehold.co/500x500" alt="">
-            </div>
-            <div class="section-right">
-                <h1>Nuestra Historia</h1>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga odit placeat optio, perferendis dolores consequatur non quasi. Voluptatem, quia sed!
-                </p>
+        <div class="section section-height-sm section-left-right-padding-xl section-bg-color-b4 section-content-align-center">
+            <div class="section-container">
+                <div class="section-left section-content-align-center">
+                    <h2>Hazte parte y apoya nuestra causa</h2>
+                </div>
+                <div class="section-right section-content-align-center">
+                    <button class="btn btn-md btn-dono btn-hover">Donar</button>
+                </div>
             </div>
         </div>
-        <div class="section">
-            <div class="section-left">
-                <h1>Que nos mueve</h1>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga odit placeat optio, perferendis dolores consequatur non quasi. Voluptatem, quia sed!
-                </p>
-            </div>
-            <div class="section-right">
-                <img src="https://www.placehold.co/500x500" alt="">
+        <div class="section section-height-xl section-left-right-padding-lg section-content-align-center section-bg-color-w">
+            <div class="section-container">
+                <div class="section-left section-content-align-left">
+                    <img src="https://www.placehold.co/500x500" alt="">
+                </div>
+                <div class="section-right ">
+                    <h1>Nuestra Historia</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga odit placeat optio, perferendis dolores consequatur non quasi. Voluptatem, quia sed!
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="banner banner-vert banner-theme-1">
-            <div>
+        <div class="section section-height-xl section-left-right-padding-lg section-content-align-center section-bg-color-w">
+            <div class="section-container">
+                <div class="section-left">
+                    <h1>Que nos mueve</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga odit placeat optio, perferendis dolores consequatur non quasi. Voluptatem, quia sed!
+                    </p>
+                </div>
+                <div class="section-right section-content-align-right">
+                    <img src="https://www.placehold.co/500x500" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="section section-height-md section-left-right-padding-xl section-content-align-center section-bg-color-b4">
+            <div class="section-container section-flex-column">
                 <h1>Siguenos en nuestras redes</h1>
-            </div>
-            <div>
+
                 <ul class="list-no-style-h">
                     <li>
                         <a class="btn btn-md btn-rrss" href="">item 1</a>
@@ -108,19 +115,39 @@
                 </ul>
             </div>
         </div>
-        <div class="section">
-            <div class="section-left">
-                <div class="section-container">
+        <div class="section section-height-xl section-left-right-padding-md section-content-align-center section-bg-color-w">
+            <div class="section-container section-height-max">
+                
+                <div class="section-left banner-map-card">
                     <p>Email: fundacionvinculosurbanos@gmail.com</p>
                     <p>Fono: +56 9 1234 5678</p>
                     <p>Dirección: </p>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106447.48167369292!2d-70.98002941013559!3d-33.51480488183225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dd285b2c673f%3A0xfcd19ca5936c866d!2sMaip%C3%BA%2C%20Maipu%2C%20Santiago%20Metropolitan%20Region!5e0!3m2!1sen!2scl!4v1747425700082!5m2!1sen!2scl" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </div>
-            <div class="section-right">
-                <form action="">
-                    
-                </form>
+                <div class="section-right">
+                    <form class="main-section-form" action="action_page.php">
+
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        </select>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+
             </div>
         </div>
     </main> 
@@ -148,7 +175,7 @@
 
             </div>
             <div class="footer-right">
-                <img src="" alt="">
+                <img style="max-width: 150px;" src="..\public\assets\images\img\logo.png" alt="">
                 <a href="../src/Views/donation_view.php">
                     <button class="btn btn-md btn-dono btn-hover">Donar</button>
                 </a>
