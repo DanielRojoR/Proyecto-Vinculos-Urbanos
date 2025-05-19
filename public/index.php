@@ -65,7 +65,8 @@
                 <h2>Hazte parte y apoya nuestra causa</h2>
             </div>
             <div class="banner-right">
-                <button class="btn btn-md btn-dono btn-hover">Donar</button>
+                <a href="../src/Views/donation_view.php">
+                <button class="btn btn-md btn-dono btn-hover">Donar</button></a>
             </div>
         </div>
         <div class="section">
