@@ -49,9 +49,53 @@
             </div>
         </div>
     </nav>
+
     <main>
-        <div class="temp-">
+        <div class="temp-section-container">
+            <div class="temp-information-donations">
+                <h1>¿Como puedes donarnos?</h1>
+                <p>Puedes donarnos transfiriendo desde tu cuenta bancaria y banco de preferencia.</p>
+                    <ul>
+                    <li>Fundacion Vinculos Urbanos</li>
+                    <li>Rut: 123.123.123-1</li>
+                    <li>Banco De Chile</li>
+                    <li>Cuenta Corriente</li>
+                    <li>Correo:</li>
+                    <li>N° cuenta:</li>
+                    </ul>
+            </div>
+            <div class="temp-donation-button-section">
+                <h1>Cada ayuda cuenta!</h1>
+                <p>En esta parte puedes decidir si puedes ser un donante mensual o realizar una donacion unica.</p>
+                <button class="btn btn-md btn-dono btn-hover">Donar</button>
+            </div>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Links</h2>
+                <ul>
+                    <li>
+                        <a href="">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="">Términos y condiciones</a>
+                    </li>
+                    <li>
+                        <a href="">Sé voluntari@!</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="footer-center">
+                <p>Fundación Vínculos Urbanos</p>
+                <p>Desarrollado por Daniel R, Camila V, Samuel C</p>
+
+            </div>
+        </div>
+    </footer>
+    <script src="\public\assets\css\main.css"></script>
 </body>
 </html>

@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="\public\assets\css\main.css">
-    <link rel="shortcut icon" href="\public\assets\images\favicon\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="..\..\public\assets\css\main.css">
+    <link rel="shortcut icon" href="..\..\public\assets\images\favicon\favicon.ico" type="image/x-icon">
     <title>Fundación Vínculos Urbanos</title>
 </head>
-
 <body>
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-left">
                 <a class="btn-navbar-logo" href="../../public/index.php">Vinculos Urbanos</a>
-            </div>
+            </div>  
             <div class="navbar-right">
                 <ul>        
                     <li>
@@ -54,8 +53,8 @@
         <div class="section section-height-sm">
             <div class= "section-container">
                 <div class="section-left section-left-alt">
-                    <h1>Quienes somos</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum numquam cupiditate amet, illum veniam sed est aperiam perspiciatis rerum iste, deleniti magni totam voluptates? Assumenda voluptatibus quaerat ab repellendus.</p>
+                    <h1>¿Quienes somos?</h1>
+                    <p></p>
                 </div>
                 <div class="section-right">
                     <img src="https://www.placehold.co/350x350" alt="">
@@ -69,8 +68,8 @@
                     <img src="https://www.placehold.co/350x350" alt="">
                 </div>
                 <div class="section-right section-right-alt">
-                    <h1>Quienes somos</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum numquam cupiditate amet, illum veniam sed est aperiam perspiciatis rerum iste, deleniti magni totam voluptates? Assumenda voluptatibus quaerat ab repellendus.</p>
+                    <h1>Nuestro Objetivo</h1>
+                    <p>Formar una organización formal y estructurada para prevenir el consumo de sustancias en niños, niñas y adolescentes de sectores vulnerables, generando un impacto social a través de la intervención temprana, la educación y el trabajo comunitario.</p>
                 </div>
             </div>
         </div>
@@ -81,7 +80,6 @@
                 <h2>Nuestro equipo</h2>
             </div> -->
             <div class = "section-container">
-                <!--  -->
                 <div class="card">
                     <div class="card-img-round">
                         <img src="https://www.placehold.co/500x500" alt="">
@@ -127,10 +125,10 @@
                     <img src="https://www.placehold.co/500x500" alt="">
                 </div>
                 <div class="card-title">
-                    <h1>Director 1</h1>
+                    <h1 style="color: var(--color-brown-2)">Director 1</h1>
                 </div>
-                <div class="card-subtitle">
-                    <h4>CEO</h4>
+                <div class="card-subtitle"> 
+                    <h4 style="color: var(--color-brown-2)">CEO</h4>
                 </div>
             </div>
         </div>
