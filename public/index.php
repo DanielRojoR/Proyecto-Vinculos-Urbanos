@@ -90,10 +90,11 @@
                 <img src="https://www.placehold.co/500x500" alt="">
             </div>
         </div>
-        <div class="section section-height-md section-left-right-padding-xl section-content-align-center section-bg-color-b4">
-            <div class="section-container section-flex-column">
+        <div class="banner banner-vert banner-theme-1">
+            <div>
                 <h1>Siguenos en nuestras redes</h1>
-
+            </div>
+            <div>
                 <ul class="list-no-style-h">
                     <li>
                         <a class="btn btn-md btn-rrss" href="">
@@ -155,7 +156,7 @@
 
             </div>
             <div class="footer-right">
-                <img style="max-width: 150px;" src="..\public\assets\images\img\logo.png" alt="">
+                <img src="" alt="">
                 <a href="../src/Views/donation_view.php">
                     <button class="btn btn-md btn-dono btn-hover">Donar</button>
                 </a>
