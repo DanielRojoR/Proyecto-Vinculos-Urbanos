@@ -1,5 +1,16 @@
-.list-no-style-h {
+.list {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.list-vert {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.list-space-evenly {
+    width: 100%;
+    justify-content: space-evenly;
 }

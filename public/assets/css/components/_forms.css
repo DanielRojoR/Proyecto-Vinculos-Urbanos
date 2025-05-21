@@ -1,0 +1,39 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 7.5%;
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: none;   
+    outline: none;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    box-shadow: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+
+.form select {
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 5px;
+    box-shadow: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+
+.form textarea {
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 5px;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+
+
+.form-bg-clr-b1 {background-color: var(--color-brown-1);}
+.form-bg-clr-b2 {background-color: var(--color-brown-2);}
+.form-bg-clr-b3 {background-color: var(--color-brown-3);}
+.form-bg-clr-b4 {background-color: var(--color-brown-4);}

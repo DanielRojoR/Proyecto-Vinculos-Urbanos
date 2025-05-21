@@ -1,14 +1,17 @@
 /* Typography foundations */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  color: #333;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.5em;
+}
+
+p {
+  font-weight: 500;
 }
 
 h1 { font-size: 2.5rem; }
@@ -21,10 +24,23 @@ h4 { font-size: 1.5rem; }
 } */
 
 a {
-  color: #0066cc;
   text-decoration: none;
+  transition: var(--transition);  
 }
 
 a:hover {
+  text-decoration: none;
   text-decoration: underline;
+  transition: var(--transition);
 }
+
+/* TEXT COLOR STYLES */
+
+.text-clr-w {color: var(--color-white);}
+.text-clr-b {color: var(--color-black);}
+.text-clr-b1 {color: var(--color-brown-1);}
+.text-clr-b2 {color: var(--color-brown-2);}
+.text-clr-b3 {color: var(--color-brown-3);}
+.text-clr-b4 {color: var(--color-brown-4);}
+.text-clr-p1 {color: var(--color-pink-1);}
+.text-clr-p2 {color: var(--color-pink-2);}

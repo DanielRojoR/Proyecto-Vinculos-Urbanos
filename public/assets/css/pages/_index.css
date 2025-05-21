@@ -3,26 +3,40 @@
 }
 
 .banner-map-card {
-    background-color: var(--color-brown-2);
+    height: 100%;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    left: 300px;
-    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-    color: white;
-    padding: 40px;
-    width: 35vw;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.main-section-form {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    position: absolute;
-    right: 300px;
-    bottom: 20px;
-    width: 25vw;
+.banner-map-card iframe{
     border-radius: var(--border-radius);
     background-color: var(--color-brown-2);
+    padding: 20px;
+    margin: 5px;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("/public/assets/images/img/parallax.png");
+  /* Set a specific height */
+  min-height: 500px;
+  /* Keep these properties */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* Remove background-attachment: fixed */
+  /* Add this for better performance */
+  will-change: background-position-y;
+}
+
+.parallax::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(226, 201, 196, 0.8); /* B1786B with 40% opacity */
+  pointer-events: none;
+  z-index: 1;
 }
