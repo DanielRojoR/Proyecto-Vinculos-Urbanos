@@ -50,8 +50,11 @@
 .section-bg-color-w {background-color: var(--color-white);}
 
 /* SECTION HEIGHT STYLING */
-.section-height-sm {height: 25vh;}
-.section-height-md {height: 40vh;}
-.section-height-lg {height: 55vh;}
-.section-height-xl {height: 70vh;}
-.section-height-xxl {height: 85vh;}
+.section-height-xs {height: 16.7vh;}
+.section-height-sm {height: 33.3vh;}
+.section-height-md {height: 50vh;}
+.section-height-lg {height: 66.7vh;}
+.section-height-xl {height: 83.4vh;}
+.section-height-xxl {height: 100vh;}
+
+.section-height-standard {height: 70vh;}

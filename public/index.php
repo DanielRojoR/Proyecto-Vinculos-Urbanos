@@ -50,8 +50,8 @@
         </div>
     </nav>
 
-    <main>
-        <div id="parallax-section" class="text-clr-w section section-height-xl section-left-right-padding-lg section-content-align-center section-bg-color-b2 parallax">
+    <main> 
+        <div id="parallax-section" class="text-clr-w section section-height-standard section-left-right-padding-lg section-content-align-center section-bg-color-b2 parallax">
             <div class="section-container">
                 <div class="section-left">
                     <h1>Nuestra visión y misión</h1>
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-clr-w section section-height-sm section-left-right-padding-xl section-bg-color-b3 section-content-align-center">
+        <div class="text-clr-w section section-height-xs section-left-right-padding-xl section-bg-color-b3 section-content-align-center">
             <div class="section-container">
                 <div class="section-left section-content-align-center">
                     <h2 class="">Hazte parte y apoya nuestra causa</h2>
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-clr-b2 section section-height-xl section-left-right-padding-lg section-content-align-center section-bg-color-w">
+        <div class="text-clr-b2 section section-height-standard section-left-right-padding-lg section-content-align-center section-bg-color-w">
             <div class="section-container">
                 <div class="section-left section-content-align-left">
                     <img src="https://www.placehold.co/500x500" alt="">
@@ -85,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-clr-b2 section section-height-xl section-left-right-padding-lg section-content-align-center section-bg-color-w">
+        <div class="text-clr-b2 section section-height-standard section-left-right-padding-lg section-content-align-center section-bg-color-w">
             <div class="section-container">
                 <div class="section-left">
                     <h1>Que nos mueve</h1>
@@ -98,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-clr-b2 section section-height-md section-left-right-padding-xxl section-content-align-center section-bg-color-b4">
+        <div class="text-clr-b2 section section-height-sm section-left-right-padding-xxl section-content-align-center section-bg-color-b4">
             <div class="section-container section-flex-column">
                 <h1>Siguenos en nuestras redes</h1>
 
@@ -127,7 +127,7 @@
                 </ul>
             </div>
         </div>
-        <div class="section section-height-xxl section-left-right-padding-md section-content-align-center section-bg-color-w">
+        <div class="section section-height-xl section-left-right-padding-md section-content-align-center section-bg-color-w">
             <div class="section-container section-height-max">
                 
                 <div class="text-clr-b2 section-left banner-map-card">

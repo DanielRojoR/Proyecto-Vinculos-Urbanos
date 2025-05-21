@@ -50,25 +50,25 @@
     </nav>
 
     <main>
-        <div class="section section-height-sm">
+        <div class="text-clr-b2 section section-height-md section-left-right-padding-xl section-content-align-center section-bg-color-w">
             <div class= "section-container">
-                <div class="section-left section-left-alt">
+                <div class="section-left">
                     <h1>¿Quienes somos?</h1>
                     <p>
 Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cruzando Fronteras”, activo desde 1998 en el barrio Sol Poniente de Maipú.</p>
                 </div>
-                <div class="section-right">
+                <div class="section-right section-content-align-right">
                     <img src="https://www.placehold.co/350x350" alt="">
                 </div>
             </div>
         </div>
 
-        <div class="section section-height-sm">
+        <div class="section section-height-md section-left-right-padding-xl section-content-align-center section-bg-color-w">
             <div class= "section-container">
-                <div class="section-left">
+                <div class="section-left section-content-align-left">
                     <img src="https://www.placehold.co/350x350" alt="">
                 </div>
-                <div class="section-right section-right-alt">
+                <div class="section-right ">
                     <h1>Nuestro Objetivo</h1>
                     <p>Formar una organización formal y estructurada para prevenir el consumo de sustancias en niños, niñas y adolescentes de sectores vulnerables, generando un impacto social a través de la intervención temprana, la educación y el trabajo comunitario.</p>
                 </div>
@@ -76,7 +76,7 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
         </div>
 
 
-        <div class="section section-color-br2 ">
+        <div class="section section-height-lg section-left-right-padding-md section-content-align-center section-bg-color-b2">
             <!-- <div class="section-team-title">
                 <h2>Nuestro equipo</h2>
             </div> -->
@@ -120,7 +120,7 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
             </div>
         </div>
 
-        <div class="section">
+        <div class="section section-height-lg section-left-right-padding-md section-content-align-center section-bg-color-b2">
             <div class="card">
                 <div class="card-img-round">
                     <img src="https://www.placehold.co/500x500" alt="">
@@ -137,9 +137,9 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
 
         <footer class="footer">
         <div class="footer-container">
-            <div class="footer-left">
+            <div class="footer-left footer-section-style">
                 <h2>Links</h2>
-                <ul>
+                <ul class="list list-vert">
                     <li>
                         <a href="">Preguntas frecuentes</a>
                     </li>
@@ -152,14 +152,17 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
                 </ul>
 
             </div>
-            <div class="footer-center">
+            <div class="footer-center footer-section-style">
                 <p>Fundación Vínculos Urbanos</p>
                 <p>Desarrollado por Daniel R, Camila V, Samuel C</p>
 
             </div>
-            <div class="footer-right">
-                <img src="" alt="">
-                <button class="btn btn-md btn-dono btn-hover">Donar</button>
+            <div class="footer-right footer-section-style">
+                <img style="max-width: 150px;" src="..\public\assets\images\img\logos\logo.png" alt="">
+                <a href="../src/Views/donation_view.php">
+                    <button class="btn btn-md btn-dono btn-hover">Donar</button>
+                </a>
+                
             </div>
         </div>
     </footer>
