@@ -1,37 +1,55 @@
 .form {
     display: flex;
     flex-direction: column;
-    padding: 7.5%;
     border-radius: var(--border-radius);
-    border: none;
-    box-shadow: none;   
-    outline: none;
 }
 
 .form input {
     width: 100%;
-    padding: 10px 5px;
-    border-radius: 5px;
-    box-shadow: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    box-shadow: none;   
+    outline: none;
 }   
 
 .form select {
     width: 100%;
-    padding: 10px 0px;
-    border-radius: 5px;
-    box-shadow: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    box-shadow: none;   
+    outline: none;
 }   
 
 .form textarea {
     width: 100%;
+    height: 175px;
     padding: 10px 0px;
     border-radius: 5px;
-    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}   
+    border: none;
+    box-shadow: none;   
+    outline: none;
+}  
 
+.form-field-width-sm{width: 25%;}
+.form-field-width-md{width: 50%;}
+.form-field-width-lg{width: 75%;}
+.form-field-width-xl{width: 100%;}
+
+.form-field-bot-margin-sm{margin: 0px 0px 5px 0px;}
+.form-field-bot-margin-md{margin: 0px 0px 10px 0px;}
+.form-field-bot-margin-lg{margin: 0px 0px 15px 0px;}
+.form-field-bot-margin-xl{margin: 0px 0px 20px 0px;}
+
+.form-field-padding-sm{padding: 5px;}
+.form-field-padding-md{padding: 10px;}
+.form-field-padding-lg{padding: 15px;}
+.form-field-padding-xl{padding: 20px;}
+
+.form-padding-sm{padding: 10px;}
+.form-padding-md{padding: 20px;}
+.form-padding-lg{padding: 30px;}
+.form-padding-xl{padding: 40px;}
 
 .form-bg-clr-b1 {background-color: var(--color-brown-1);}
 .form-bg-clr-b2 {background-color: var(--color-brown-2);}
