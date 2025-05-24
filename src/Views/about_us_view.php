@@ -14,7 +14,13 @@
                 <a class="btn-navbar-logo" href="..\..\public\index.php">Vinculos Urbanos</a>
             </div>
             <div class="navbar-right">
-                <ul>     
+                <ul>    
+                    <li>
+                        <a class="btn btn-sm btn-navbar" href="donation_view.php">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
+                            Contacto
+                        </a>
+                    </li> 
                     <li>
                         <a class="btn btn-sm btn-navbar" href="initiatives_view.php">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M640-440 474-602q-31-30-52.5-66.5T400-748q0-55 38.5-93.5T532-880q32 0 60 13.5t48 36.5q20-23 48-36.5t60-13.5q55 0 93.5 38.5T880-748q0 43-21 79.5T807-602L640-440Zm0-112 109-107q19-19 35-40.5t16-48.5q0-22-15-37t-37-15q-14 0-26.5 5.5T700-778l-60 72-60-72q-9-11-21.5-16.5T532-800q-22 0-37 15t-15 37q0 27 16 48.5t35 40.5l109 107ZM280-220l278 76 238-74q-5-9-14.5-15.5T760-240H558q-27 0-43-2t-33-8l-93-31 22-78 81 27q17 5 40 8t68 4q0-11-6.5-21T578-354l-234-86h-64v220ZM40-80v-440h304q7 0 14 1.5t13 3.5l235 87q33 12 53.5 42t20.5 66h80q50 0 85 33t35 87v40L560-60l-280-78v58H40Zm80-80h80v-280h-80v280Zm520-546Z"/></svg>
@@ -121,7 +127,7 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
             </div>
         </div>
 
-        <div class="section section-height-lg section-left-right-padding-md section-content-align-center section-bg-color-b2">
+        <div class="section section-height-lg section-left-right-padding-md section-content-align-center section-bg-color-w">
             <div class="card">
                 <div class="card-img-round">
                     <img src="https://www.placehold.co/500x500" alt="">
@@ -136,7 +142,8 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
         </div>
     </main>
 
-        <footer class="footer">
+
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-left footer-section-style">
                 <h2>Links</h2>
@@ -159,7 +166,7 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
 
             </div>
             <div class="footer-right footer-section-style">
-                <img style="max-width: 150px;" src="..\public\assets\images\img\logos\logo.png" alt="">
+                <img style="max-width: 150px;" src="..\..\public\assets\images\img\logos\logo.png" alt="">
                 <a href="../src/Views/donation_view.php">
                     <button class="btn btn-md btn-dono btn-hover">Donar</button>
                 </a>
