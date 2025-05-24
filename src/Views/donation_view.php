@@ -61,7 +61,7 @@
         <div class="section section-height-xxl section-left-right-padding-md section-content-align-center section-bg-color-w">
             <div class="section-container section-height-max">
 
-                <div class="section section-height-sm section-left-right-padding-sm section-border-radious-left-right section-bg-color-b4">
+                <div class="section-height-sm section-left-right-padding-sm section-border-radious-left-right section-bg-color-b4">
                     <h1>¿Como puedes donarnos?</h1>
                     <p>Puedes donarnos transfiriendo desde tu cuenta bancaria y banco de preferencia.</p>
                         <ul>
@@ -74,7 +74,7 @@
                         </ul>
                 </div>
 
-                <div class="section section-height-sm section-left-right-padding-sm section-border-radious-left-right section-bg-color-b4">
+                <div class="section-height-sm section-left-right-padding-sm section-border-radious-left-right section-bg-color-b4">
                     <h1>Cada ayuda cuenta!</h1>
                     <p>En esta parte puedes decidir si puedes ser un donante mensual o realizar una donacion unica.</p>
                     <button class="btn btn-md btn-dono btn-hover">Donar</button>

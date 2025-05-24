@@ -57,7 +57,56 @@
     </nav>
 
     <main>
-        <h1>Pagina de financiamientos</h1>
+        <div class = "section-content-align-center">
+            <h1>Pagina de financiamientos</h1>
+        </div>
+
+    
+       <div class="section section-height-xxl section-left-right-padding-md section-content-align-center section-bg-color-b2">
+            <div class="section-container section-height-max">
+                <div class="section-height-sm section-left-right-padding-sm section-bg-color-b4 section-border-radious-left-right">
+                    <h1 class = "section-content-align-center" > Ingresos <h1>
+                        <table class = "section-content-align-center">
+                            <tr>
+                                <th class = "text-clr-b1" >Montos</th>
+                            </tr>
+                            <tr class = "text-clr-b2">
+                                <td>
+                                    <ul> 
+                                        <li>20.000</li>
+                                        <li>50.000</li>
+                                        <li>100.000</li>
+                                        <li>10.000</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="section-height-sm section-left-right-padding-sm section-bg-color-b4 section-border-radious-left-right">
+                    <h1 class = "section-content-align-center" > Salidas <h1>
+                        <table class = "section-content-align-center">
+                                <tr class = "text-clr-b1">
+                                    <th>Enfoques</th>
+                                </tr>
+                                <tr class = "text-clr-b2"  >
+                                    <td>
+                                        <ul> 
+                                            <li>Nuevos articulos.</li>
+                                            <li>Juguetes.</li>
+                                            <li>Alimento.</li>
+                                            <li>Vestuario.</li>
+                                        </ul>    
+                                </tr>
+                        </table>
+                </div>
+            </div>
+       </div>
+
+       <div class="section">
+            <div class="section-bg-color-w section-content-align-center">
+                <p class = "text-clr-b3">Aqui se podran visualizar todos los ingresos que se hayan realizado a la fundacion. Tambien en que fue destinado ese dinero.</p>
+            </div>
+       </div>
     </main>
 
 

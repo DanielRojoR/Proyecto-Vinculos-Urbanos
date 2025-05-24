@@ -57,7 +57,11 @@
     </nav>
 
     <main>
-    <h1>Pagina de iniciativas</h1>
+
+        <div class = "section-content-align-center">
+            <h1>Pagina de iniciativas</h1>
+        </div>
+    
     </main>
 
     <footer class="footer">
