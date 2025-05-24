@@ -17,6 +17,14 @@
     margin: 5px;
 }
 
+.rrss-banner-image {
+  background-color: var(--color-pink-1);
+  background-image: url("/public/assets/images/img/banner-2.png");
+  background-blend-mode: soft-light;
+  font-weight: 800;
+  font-size: 480px;
+}
+
 .parallax {
   /* The image used */
   background-image: url("/public/assets/images/img/parallax.png");
