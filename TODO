@@ -1,0 +1,27 @@
+Este arhivo contiene las cosas que me van quedando pendiente despues de cada sesion de programacion
+
+inicio log (24/05/25)
+
+ya implemente la api, ahora solo queda pulir los datos que se pasan en las request ya que me da el error 400 (bad request) pero al menos
+ya se puede conectar con la api y recibe los tokens, todo esto usando la api y el codigo de webpay de integracion, para produccion tenemos 
+que crear una cuenta usando las credenciales de la fundacion, para asi tener la api privada y la clave de produccion para empaquetar y hacer el lanzamiento final
+el dia de mañana (25/05/25) tengo que tratar de dejar listo todo lo de la api, y hacer la página de donaciones, ya tengo una idea clara de como lo vamos a hacer
+
+asi que finalmente los pendientes para mañana son:
+1. pagina de donaciones
+2. singleton para conexion a la db
+3. db para guardar las donaciones
+4. ordenar el codigo de las donaciones y estructurarlo correctamente de acuerdo a estándar de industria
+5. pegarme un tiro en los cocos toi chato
+
+fin log
+
+inicio log (25/05/25)
+
+necesito investigar un poco mas el tema de la conexion a la db, despues de algunas pruebas me di cuenta que usar singleton pude dejarla vulnerable a inyeciones.
+Gracias a esto he decidido usar el clasigo POO e intentar hacer uso de los PDO de php, para esto investigare un poco mas, necesitamos que el sitio
+sea lo mas seguro posible en especial por el hecho de que manejaran (supuesto) sumas grandes de dinero
+
+1. implementar PDO para el manejo de datos
+
+lista la clase de conexion a la base de datos, y lista la base de datos para guardar las donaciones, falta terminar la vista de las donaciones

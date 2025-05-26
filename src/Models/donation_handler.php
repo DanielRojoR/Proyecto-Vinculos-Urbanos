@@ -1,194 +1,156 @@
 <?php
-require_once '..\..\vendor\autoload.php';
+// config/transbank.php
+require_once '../../vendor/autoload.php';
+require_once __DIR__ . '/db.php';
 
+Dotenv\Dotenv::createImmutable(__DIR__ . '/../..')->safeLoad();
+
+
+use Transbank\Webpay\WebpayPlus;
 use Transbank\Webpay\WebpayPlus\Transaction;
-use Transbank\Webpay\Options;
 
-class DonationHandler {
+class TransbankDonationService {
+    
+    private $commerceCode;
+    private $apiKeySecret;
+    private $environment;
     
     public function __construct() {
-        $this->configureTransbank();
+        // Configuración para integración (ambiente de pruebas)
+        $this->commerceCode = '597055555532';
+        $this->apiKeySecret = '579B532A7440BB0C9079DED94D31EA1615BACEB56610332264630D42D0A36B1C';
+        $this->environment = 'integration'; // 'integration' o 'production'
+        
+        $this->configureWebpay();
     }
     
-    private function configureTransbank() {
-        // Configuración para ambiente de pruebas
-        // En producción, usa tus credenciales reales
-        Transaction::setCommerceCode('597055555532');
-        Transaction::setApiKey('579B532A7440BB0C9079DED94D31EA1615BACEB56610332264630D42D0A36B1C');
-        Transaction::setIntegrationType('TEST'); // Cambiar a 'LIVE' en producción
+    private function configureWebpay() {
+        if ($this->environment === 'integration') {
+            WebpayPlus::configureForIntegration($this->commerceCode, $this->apiKeySecret);
+        } else {
+            WebpayPlus::configureForProduction($this->commerceCode, $this->apiKeySecret);
+        }
     }
     
-    public function processDonation() {
+    /**
+     * Crear una transacción de donación
+     */
+    public function createDonation($amount, $donorData = []) {
         try {
-            // Obtener datos del formulario
-            $donationData = $this->validateAndGetDonationData();
+            // Generate compliant buy order (max 26 chars)
+            $timestamp = substr(time(), -8); // Use last 8 digits of timestamp
+            $uniqueId = substr(uniqid(), -8); // Use last 8 digits of uniqid
+            $buyOrder = "DON{$timestamp}{$uniqueId}"; // Format: DON + 16 chars
             
-            // Crear transacción
+            // Generate session ID (keep it simple)
+            $sessionId = "SESS_" . $uniqueId;
+            
+            // URL de retorno después del pago
+            $returnUrl = $this->getBaseUrl() . '/donation/confirm';
+            
+            // Crear la transacción
             $transaction = new Transaction();
-            
-            // Generar ID único para la orden
-            $buyOrder = 'DONACION_' . time() . '_' . rand(1000, 9999);
-            $sessionId = session_id() ?: 'session_' . time();
-            
-            // URLs de retorno
-            $returnUrl = $this->getBaseUrl() . '/donation-return.php';
-            
-            // Crear la transacción en Transbank
-            $response = $transaction->create(
-                $buyOrder,
-                $sessionId,
-                $donationData['amount'],
-                $returnUrl
-            );
-            
-            // Guardar datos de la donación en la base de datos
-            $this->saveDonationData($buyOrder, $donationData);
-            
-            // Redirigir a Transbank
-            $redirectUrl = $response->getUrl() . '?token_ws=' . $response->getToken();
+            $response = $transaction->create($buyOrder, $sessionId, $amount, $returnUrl);
+
+            // Guardar datos de la donación en base de datos
+            $this->saveDonationData($buyOrder, $amount, $donorData, $response->getToken());
             
             return [
                 'success' => true,
-                'redirect_url' => $redirectUrl,
+                'token' => $response->getToken(),
+                'url' => $response->getUrl(),
                 'buy_order' => $buyOrder
             ];
             
         } catch (Exception $e) {
-            error_log('Error procesando donación: ' . $e->getMessage());
+            error_log("Transbank Error: " . $e->getMessage()); // Add logging
             return [
                 'success' => false,
-                'error' => 'Error procesando la donación. Por favor intenta nuevamente.'
+                'error' => $e->getMessage()
             ];
         }
     }
     
-    public function confirmDonation() {
+    /**
+     * Confirmar el pago después del retorno de Transbank
+     */
+    public function confirmDonation($token) {
         try {
-            $token = $_POST['token_ws'] ?? $_GET['token_ws'];
-            
-            if (!$token) {
-                throw new Exception('Token no encontrado');
-            }
-            
             $transaction = new Transaction();
             $response = $transaction->commit($token);
             
-            // Verificar estado de la transacción
-            if ($response->getStatus() === 'AUTHORIZED') {
-                // Pago exitoso
-                $this->updateDonationStatus($response->getBuyOrder(), 'completed', $response);
-                
-                return [
-                    'success' => true,
-                    'message' => 'Donación procesada exitosamente',
-                    'authorization_code' => $response->getAuthorizationCode(),
-                    'amount' => $response->getAmount(),
-                    'buy_order' => $response->getBuyOrder()
-                ];
-            } else {
-                // Pago fallido
-                $this->updateDonationStatus($response->getBuyOrder(), 'failed', $response);
-                
-                return [
-                    'success' => false,
-                    'message' => 'La donación no pudo ser procesada'
-                ];
-            }
+            // Actualizar estado de la donación
+            $this->updateDonationStatus($response->getBuyOrder(), $response);
+            
+            return [
+                'success' => true,
+                'response_code' => $response->getResponseCode(),
+                'status' => $response->getStatus(),
+                'amount' => $response->getAmount(),
+                'buy_order' => $response->getBuyOrder(),
+                'authorization_code' => $response->getAuthorizationCode(),
+                'transaction_date' => $response->getTransactionDate()
+            ];
             
         } catch (Exception $e) {
-            error_log('Error confirmando donación: ' . $e->getMessage());
             return [
                 'success' => false,
-                'error' => 'Error confirmando la donación'
+                'error' => $e->getMessage()
             ];
         }
     }
     
-    private function validateAndGetDonationData() {
-        $requiredFields = ['name', 'surname', 'email', 'confirmEmail', 'amount'];
-        $data = [];
+    /**
+     * Guardar datos de donación en base de datos
+     */
+private function saveDonationData($buyOrder, $amount, $donorData, $token) {
+    try {
+        $db = new Database();
         
-        foreach ($requiredFields as $field) {
-            if (!isset($_POST[$field]) || empty($_POST[$field])) {
-                throw new Exception("Campo requerido faltante: $field");
-            }
-            $data[$field] = trim($_POST[$field]);
-        }
+        $query = "INSERT INTO vinculosurbanosdb.donor_user 
+                (buy_order, full_name, email, phone, token, is_anon) 
+                VALUES (?, ?, ?, ?, ?, ?)";
         
-        // Validar emails coincidan
-        if ($data['email'] !== $data['confirmEmail']) {
-            throw new Exception('Los correos electrónicos no coinciden');
-        }
-        
-        // Validar email
-        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-            throw new Exception('Email inválido');
-        }
-        
-        // Validar monto
-        $amount = intval(str_replace(['.', ','], '', $data['amount']));
-        if ($amount < 1000) {
-            throw new Exception('El monto mínimo es $1.000');
-        }
-        
-        $data['amount'] = $amount;
-        $data['currency'] = $_POST['currency'] ?? 'CLP';
-        
-        return $data;
-    }
-    
-    private function saveDonationData($buyOrder, $donationData) {
-        // Conectar a la base de datos
-        $pdo = $this->getDatabaseConnection();
-        
-        $sql = "INSERT INTO donations (
-            buy_order, name, surname, email, amount, currency, 
-            status, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())";
-        
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([
+        $params = [
             $buyOrder,
-            $donationData['name'],
-            $donationData['surname'],
-            $donationData['email'],
-            $donationData['amount'],
-            $donationData['currency'],
-            'pending'
+            $donorData['name'] ?? '',     // Use array key 'name' with null coalescing
+            $donorData['email'] ?? '',    // Use array key 'email' with null coalescing
+            $donorData['phone'] ?? '',    // Use array key 'phone' with null coalescing
+            $token,
+            $donorData['is_anon'] ?? 0    // Default to 0 if not set
+        ];
+        
+        return $db->execute($query, $params);
+        
+    } catch (PDOException $e) {
+        error_log("Error saving donation data: " . $e->getMessage());
+        throw new Exception("Failed to save donation data: " . $e->getMessage());
+    }
+}
+    
+    /**
+     * Actualizar estado de donación después de confirmación
+     */
+    private function updateDonationStatus($buyOrder, $response) {
+        // Determinar estado basado en response_code
+        $status = ($response->getResponseCode() == 0) ? 'approved' : 'rejected';
+        
+        // Aquí actualizarías en tu base de datos
+        /*
+        $pdo = $this->getDatabase();
+        $stmt = $pdo->prepare("
+            UPDATE donations 
+            SET status = ?, response_code = ?, authorization_code = ?, transaction_date = ?, updated_at = NOW()
+            WHERE buy_order = ?
+        ");
+        $stmt->execute([
+            $status,
+            $response->getResponseCode(),
+            $response->getAuthorizationCode(),
+            $response->getTransactionDate(),
+            $buyOrder
         ]);
-    }
-    
-    private function updateDonationStatus($buyOrder, $status, $transactionResponse = null) {
-        $pdo = $this->getDatabaseConnection();
-        
-        $authCode = $transactionResponse ? $transactionResponse->getAuthorizationCode() : null;
-        $cardNumber = $transactionResponse ? $transactionResponse->getCardDetail()['card_number'] ?? null : null;
-        
-        $sql = "UPDATE donations SET 
-                status = ?, 
-                authorization_code = ?, 
-                card_number = ?, 
-                updated_at = NOW() 
-                WHERE buy_order = ?";
-        
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([$status, $authCode, $cardNumber, $buyOrder]);
-    }
-    
-    private function getDatabaseConnection() {
-        // Configurar según tu base de datos
-        $host = 'localhost';
-        $dbname = 'donations_db';
-        $username = 'your_username';
-        $password = 'your_password';
-        
-        try {
-            $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $pdo;
-        } catch (PDOException $e) {
-            throw new Exception('Error conectando a la base de datos');
-        }
+        */
     }
     
     private function getBaseUrl() {
@@ -196,106 +158,24 @@ class DonationHandler {
         $host = $_SERVER['HTTP_HOST'];
         return $protocol . '://' . $host;
     }
-    
-    public function sendDonationEmail($donationData) {
-        // Enviar email de confirmación al donante
-        $to = $donationData['email'];
-        $subject = 'Confirmación de Donación';
-        $message = "
-        <html>
-        <head>
-            <title>Confirmación de Donación</title>
-        </head>
-        <body>
-            <h2>¡Gracias por tu donación!</h2>
-            <p>Hola {$donationData['name']},</p>
-            <p>Hemos recibido tu donación por un monto de \${$donationData['amount']} CLP.</p>
-            <p>Tu código de autorización es: {$donationData['authorization_code']}</p>
-            <p>Gracias por ayudarnos a hacer la diferencia.</p>
-        </body>
-        </html>
-        ";
-        
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= 'From: donaciones@tuorganizacion.cl' . "\r\n";
-        
-        mail($to, $subject, $message, $headers);
-    }
 }
 
-// Archivos de endpoints
+// Ejemplo de uso básico:
 
-// process-donation.php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    session_start();
-    
-    $donationHandler = new DonationHandler();
-    $result = $donationHandler->processDonation();
-    
-    if ($result['success']) {
-        header('Location: ' . $result['redirect_url']);
-        exit;
-    } else {
-        // Mostrar error
-        echo json_encode($result);
-    }
-}
-
-// donation-return.php
-session_start();
-
-$donationHandler = new DonationHandler();
-$result = $donationHandler->confirmDonation();
+// Para crear una donación:
+$donationService = new TransbankDonationService();
+$result = $donationService->createDonation(100000000, [
+    'name' => 'Juan Pérez',
+    'email' => 'juan@email.com',
+    'phone' => '+56912345678'
+]);
 
 if ($result['success']) {
-    // Enviar email de confirmación
-    $donationHandler->sendDonationEmail($result);
-    
-    // Mostrar página de éxito
-    echo "
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Donación Exitosa</title>
-        <style>
-            body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-            .success { color: green; font-size: 24px; margin-bottom: 20px; }
-            .details { background: #f5f5f5; padding: 20px; border-radius: 10px; margin: 20px auto; max-width: 400px; }
-        </style>
-    </head>
-    <body>
-        <h1 class='success'>¡Donación Exitosa!</h1>
-        <p>Gracias por tu generosa donación.</p>
-        <div class='details'>
-            <p><strong>Monto:</strong> \${$result['amount']} CLP</p>
-            <p><strong>Código de Autorización:</strong> {$result['authorization_code']}</p>
-            <p><strong>Orden:</strong> {$result['buy_order']}</p>
-        </div>
-        <p>Recibirás un email de confirmación en breve.</p>
-        <a href='/'>Volver al inicio</a>
-    </body>
-    </html>
-    ";
+    // Redirigir al usuario a Transbank
+    header('Location: ' . $result['url'] . '?token_ws=' . $result['token']);
 } else {
-    // Mostrar página de error
-    echo "
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Error en Donación</title>
-        <style>
-            body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-            .error { color: red; font-size: 24px; margin-bottom: 20px; }
-        </style>
-    </head>
-    <body>
-        <h1 class='error'>Error en la Donación</h1>
-        <p>{$result['message']}</p>
-        <a href='/'>Intentar nuevamente</a>
-    </body>
-    </html>
-    ";
+    echo 'Error: ' . $result['error'];
 }
+
 
 ?>

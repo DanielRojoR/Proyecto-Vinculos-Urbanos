@@ -104,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class=" rrss-banner-image text-clr-w section section-height-sm section-left-right-padding-xxl section-content-align-center section-bg-color-p2">
+        <div id="parallax-section" class=" rrss-banner-image text-clr-w section section-height-sm section-left-right-padding-xxl section-content-align-center section-bg-color-p2">
             <div class="section-container section-flex-column">
                 <h1>Siguenos en nuestras redes</h1>
 

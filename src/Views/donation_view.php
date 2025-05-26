@@ -52,25 +52,30 @@
     </nav>
 
     <main>
-        <div class="temp-section-container">
-            <div class="temp-information-donations">
-                <h1>¿Como puedes donarnos?</h1>
-                <p>Puedes donarnos transfiriendo desde tu cuenta bancaria y banco de preferencia.</p>
-                    <ul>
-                    <li>Fundacion Vinculos Urbanos</li>
-                    <li>Rut: 123.123.123-1</li>
-                    <li>Banco De Chile</li>
-                    <li>Cuenta Corriente</li>
-                    <li>Correo:</li>
-                    <li>N° cuenta:</li>
-                    </ul>
-            </div>
-            <div class="temp-donation-button-section">
-                <h1>Cada ayuda cuenta!</h1>
-                <p>En esta parte puedes decidir si puedes ser un donante mensual o realizar una donacion unica.</p>
-                <button class="btn btn-md btn-dono btn-hover">Donar</button>
-            </div>
-        </div>
+        <?php
+            require '../Models/db.php';
+
+            // se crea la instancia de la base de datos
+            $db = new Database();
+
+            // Example usage
+            try {
+                // Check connection
+                if ($db->isConnected()) {
+                    // Simple query without parameters
+                    $allUsers = $db->query("SELECT * FROM donor_user");
+                }
+            } catch (PDOException $e) {
+                // Handle errors
+                error_log($e->getMessage());
+                echo "Database error occurred";
+            }
+
+            foreach($allUsers as $user){
+                foreach($user as $user_item)
+                    echo($user_item);
+            }
+        ?>
     </main>
 
     <footer class="footer">
