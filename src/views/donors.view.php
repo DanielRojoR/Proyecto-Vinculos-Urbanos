@@ -8,7 +8,6 @@
     <title>Fundación Vínculos Urbanos</title>
 </head>
 <body>
-
     <nav class="navbar">
         <div class="navbar-container">  
             <div class="navbar-left">
@@ -52,30 +51,7 @@
     </nav>
 
     <main>
-        <?php
-            require '../Models/db.php';
-
-            // se crea la instancia de la base de datos
-            $db = new Database();
-
-            // Example usage
-            try {
-                // Check connection
-                if ($db->isConnected()) {
-                    // Simple query without parameters
-                    $allUsers = $db->query("SELECT * FROM donor_user");
-                }
-            } catch (PDOException $e) {
-                // Handle errors
-                error_log($e->getMessage());
-                echo "Database error occurred";
-            }
-
-            foreach($allUsers as $user){
-                foreach($user as $user_item)
-                    echo($user_item);
-            }
-        ?>
+        
     </main>
 
     <footer class="footer">
@@ -105,3 +81,28 @@
     <script src="\public\assets\css\main.css"></script>
 </body>
 </html>
+
+<?php
+            // require '../Models/db.php';
+
+            // // se crea la instancia de la base de datos
+            // $db = new Database();
+
+            // // Example usage
+            // try {
+            //     // Check connection
+            //     if ($db->isConnected()) {
+            //         // Simple query without parameters
+            //         $allUsers = $db->query("SELECT * FROM donor_user");
+            //     }
+            // } catch (PDOException $e) {
+            //     // Handle errors
+            //     error_log($e->getMessage());
+            //     echo "Database error occurred";
+            // }
+
+            // foreach($allUsers as $user){
+            //     foreach($user as $user_item)
+            //         echo($user_item);
+            // }
+?>
