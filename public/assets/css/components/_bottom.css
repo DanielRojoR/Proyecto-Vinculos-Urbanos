@@ -1,0 +1,7 @@
+/*Bottom Base*/
+.btmmpage{
+    box-sizing: border-box;
+    color: var(--color-white);
+    background-color: var(--color-pink-2);
+    justify-content: center;
+}

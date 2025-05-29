@@ -171,11 +171,26 @@
         </div>
     </main> 
 
-    <footer class="footer">
+     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-left footer-section-style">
-                <h2>Links</h2>
-                <ul class="list list-vert">
+
+            <div class="footer-left footer-section-style">            
+               <div class="footer-imagen"><img src="..\..\public\assets\images\img\logos\logo.png" alt="Logo Fundacion"></div>
+                
+                <a href="../src/Views/donation_view.php">
+                    <button class="btn btn-sm btn-dono btn-hover">Donar</button>
+                </a>
+
+            </div>
+
+            <div class="footer-center footer-section-style">
+                <p><em>Fundación Vínculos Urbanos</em></p>
+            </div>
+
+            <div class="footer-right footer-section-style">
+                <ul class="list">
+                    <div class="list-headings"><h2>Links</h2></div>
+                    <div class="list-vert">
                     <li>
                         <a href="">Preguntas frecuentes</a>
                     </li>
@@ -185,22 +200,12 @@
                     <li>
                         <a href="">Sé voluntari@!</a>
                     </li>
-                </ul>
-
-            </div>
-            <div class="footer-center footer-section-style">
-                <p>Fundación Vínculos Urbanos</p>
-                <p>Desarrollado por Daniel R, Camila V, Samuel C</p>
-
-            </div>
-            <div class="footer-right footer-section-style">
-                <img style="max-width: 150px;" src="..\public\assets\images\img\logos\logo.png" alt="">
-                <a href="../src/Views/donation_view.php">
-                    <button class="btn btn-md btn-dono btn-hover">Donar</button>
-                </a>
-                
+                    </div>
+                </ul>   
             </div>
         </div>
+        
+        <div class="btmmpage"><p><em>Desarrollado por Daniel R y Camila V</em></p></div>
     </footer>
     <script src="\public\assets\js\parallax_animation.js    "></script>
 </body>
