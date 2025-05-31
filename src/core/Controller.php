@@ -2,12 +2,13 @@
 
 class Controller {
 
+    #esta funcion es heredada por los controladores 
     public function view($name){
-        $filename = "../Views".$name.".View.php";
+        $filename = "../src/views/".$name.".view.php";
         if(file_exists($filename)){
             require $filename;
         } else {
-            $filename = "../Views/404.view.php";
+            $filename = "../views/404.view.php";
             require $filename;
         }
     }

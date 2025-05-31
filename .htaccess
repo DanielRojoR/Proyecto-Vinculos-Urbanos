@@ -1,6 +1,14 @@
 RewriteEngine On
-RewriteCond %{REQUEST_URI} !^/public/
-RewriteRule ^(.*)$ /public/$1 [L]
+
+# Primero, asegurarnos que el archivo o directorio no existe físicamente
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /public/index.php/$1 [L]
+
+# Redirigir todo a través de public si no comienza con /public/
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Finalmente, redirigir todas las peticiones al index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^public/(.*)$ public/index.php?url=$1 [L,QSA]

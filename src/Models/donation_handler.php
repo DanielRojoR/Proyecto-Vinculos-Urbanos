@@ -1,7 +1,7 @@
 <?php
 // config/transbank.php
 require_once '../../vendor/autoload.php';
-require_once __DIR__ . '/db.php';
+require_once '../core/Database.php';
 
 Dotenv\Dotenv::createImmutable(__DIR__ . '/../..')->safeLoad();
 
@@ -107,7 +107,7 @@ private function saveDonationData($buyOrder, $amount, $donorData, $token) {
     try {
         $db = new Database();
         
-        $query = "INSERT INTO vinculosurbanosdb.donor_user 
+        $query = "INSERT INTO vinculosurbanosdb.donors 
                 (buy_order, full_name, email, phone, token, is_anon) 
                 VALUES (?, ?, ?, ?, ?, ?)";
         
@@ -164,7 +164,7 @@ private function saveDonationData($buyOrder, $amount, $donorData, $token) {
 
 // Para crear una donación:
 $donationService = new TransbankDonationService();
-$result = $donationService->createDonation(100000000, [
+$result = $donationService->createDonation(1000000000, [
     'name' => 'Juan Pérez',
     'email' => 'juan@email.com',
     'phone' => '+56912345678'
@@ -176,6 +176,3 @@ if ($result['success']) {
 } else {
     echo 'Error: ' . $result['error'];
 }
-
-
-?>
