@@ -3,17 +3,24 @@
 class Controller {
 
     #esta funcion es heredada por los controladores 
+<<<<<<< HEAD
     public function view($name, $data = []){
         $filename = "../src/views/".$name.".view.php";
         if(file_exists($filename)){
             // Convertir el array de datos en variables
             extract($data);
+=======
+    public function view($name){
+        $filename = "../src/views/".$name.".view.php";
+        if(file_exists($filename)){
+>>>>>>> 1211b5ed73fbc7d2cb17508f7b860b812c5f6a6a
             require $filename;
         } else {
             $filename = "../views/404.view.php";
             require $filename;
         }
     }
+<<<<<<< HEAD
 }
 
 // class Controller {
@@ -34,3 +41,6 @@ class Controller {
 //         }
 //     }
 // }
+=======
+}
+>>>>>>> 1211b5ed73fbc7d2cb17508f7b860b812c5f6a6a

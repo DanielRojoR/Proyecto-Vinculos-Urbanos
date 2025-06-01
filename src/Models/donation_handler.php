@@ -1,4 +1,10 @@
 <?php
+<<<<<<< HEAD
+=======
+// config/transbank.php
+require_once '../../vendor/autoload.php';
+require_once '../core/Database.php';
+>>>>>>> 1211b5ed73fbc7d2cb17508f7b860b812c5f6a6a
 
 #IMPORTANTE, NO OLVIDAR CONFIGURAR WEBPAY PARA PRODUCCION CUANDO SE LANCE LA PAGINA
 
@@ -101,7 +107,11 @@ private function saveDonationData($buyOrder, $amount, $donorData, $token) {
     try {
         $donation = new Donations();
         
+<<<<<<< HEAD
         $query = "INSERT INTO vinculosurbanosdb.donations 
+=======
+        $query = "INSERT INTO vinculosurbanosdb.donors 
+>>>>>>> 1211b5ed73fbc7d2cb17508f7b860b812c5f6a6a
                 (buy_order, full_name, email, phone, token, is_anon) 
                 VALUES (?, ?, ?, ?, ?, ?)";
         
@@ -157,6 +167,7 @@ private function saveDonationData($buyOrder, $amount, $donorData, $token) {
 // Ejemplo de uso básico:
 
 // Para crear una donación:
+<<<<<<< HEAD
 // $donationService = new donation_handler();
 // $result = $donationService->createDonation(1000000000, [
 //     'name' => 'Juan Pérez',
@@ -170,3 +181,18 @@ private function saveDonationData($buyOrder, $amount, $donorData, $token) {
 // } else {
 //     echo 'Error: ' . $result['error'];
 // }
+=======
+$donationService = new TransbankDonationService();
+$result = $donationService->createDonation(1000000000, [
+    'name' => 'Juan Pérez',
+    'email' => 'juan@email.com',
+    'phone' => '+56912345678'
+]);
+
+if ($result['success']) {
+    // Redirigir al usuario a Transbank
+    header('Location: ' . $result['url'] . '?token_ws=' . $result['token']);
+} else {
+    echo 'Error: ' . $result['error'];
+}
+>>>>>>> 1211b5ed73fbc7d2cb17508f7b860b812c5f6a6a

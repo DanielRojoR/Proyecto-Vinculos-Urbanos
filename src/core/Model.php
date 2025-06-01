@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 require_once __DIR__ . "/Database.php";
 class Model extends Database {
     protected $table;
@@ -48,5 +49,24 @@ class Model extends Database {
     // Método para consultas personalizadas
     public function query(string $sql, array $params = []): array {
         return parent::query($sql, $params);
+=======
+
+class Model extends Database{
+
+    public function select(){
+
+    }
+
+    public function insert($query,$params){
+
+    }
+
+    public function update(){
+
+    }
+
+    public function delete(){
+
+>>>>>>> 1211b5ed73fbc7d2cb17508f7b860b812c5f6a6a
     }
 }
