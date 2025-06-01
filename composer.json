@@ -1,6 +1,14 @@
 {
+    "name": "vinculosurbanos/webapp",
+    "description": "Vinculos Urbanos Web Application",
     "require": {
-        "vlucas/phpdotenv": "^5.6",
-        "transbank/transbank-sdk": "2.0"
+        "php": ">=7.4",
+        "transbank/transbank-sdk": "^2.0",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
     }
 }

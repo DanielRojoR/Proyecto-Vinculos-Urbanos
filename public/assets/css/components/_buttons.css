@@ -3,7 +3,7 @@
   border: none;
   display: flex;
   align-items: center;
-  margin: 0 0.25rem;
+  margin: 0 0.15rem;
   border-radius: var(--border-radius);
   font-weight: 600;
   text-align: center;
@@ -24,7 +24,7 @@
   color: var(--color-brown-2);
   svg {
     fill: var(--color-brown-2);
-    margin-right: 10px;
+    margin-right: 5px;
   }
 }
 
@@ -96,7 +96,7 @@
 }
 
 /* BUTTON SPACING STYLES */
-
+.btn-xs { padding: 0.6rem 1.2rem; font-size: 1rem; }
 .btn-sm { padding: 0.75rem 1.5rem; font-size: 1.25rem; }
 .btn-md { padding: 1.75rem 3rem; font-size: 1.5rem; }
 .btn-lg { padding: 2.25rem 4rem; font-size: 2rem; }

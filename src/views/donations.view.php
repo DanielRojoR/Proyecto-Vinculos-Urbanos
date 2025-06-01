@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\..\public\assets\css\main.css">
-    <link rel="shortcut icon" href="..\..\public\assets\images\favicon\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="\public\assets\css\main.css">
+    <link rel="shortcut icon" href="\public\assets\images\favicon\favicon.ico" type="image/x-icon">
     <title>Fundación Vínculos Urbanos</title>
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-container">  
             <div class="navbar-left">
-                <a class="btn-navbar-logo" href="..\..\public\index.php">Vinculos Urbanos</a>
+                <a class="btn-navbar-logo" href="<?=ROOT?>/home">Vinculos Urbanos</a>
             </div>
             <div class="navbar-right">
                 <ul>     
@@ -51,96 +51,91 @@
     </nav>
 
     <main>
-        <div class="text-clr-b2 section section-height-md section-left-right-padding-xl section-content-align-center section-bg-color-w">
-            <div class= "section-container">
-                <div class="section-left">
-                    <h1>¿Quienes somos?</h1>
-                    <p>
-Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cruzando Fronteras”, activo desde 1998 en el barrio Sol Poniente de Maipú.</p>
-                </div>
-                <div class="section-right section-content-align-right">
-                    <img src="https://www.placehold.co/350x350" alt="">
-                </div>
-            </div>
+
+<!-- -->
+    
+<div class="donation-container">
+        <div class="header">
+            <h1>💖 Haz una Donación</h1>
+            <p>Tu apoyo hace la diferencia en nuestra misión</p>
         </div>
 
-        <div class="section section-height-md section-left-right-padding-xl section-content-align-center section-bg-color-w">
-            <div class= "section-container">
-                <div class="section-left section-content-align-left">
-                    <img src="https://www.placehold.co/350x350" alt="">
+        <div class="form-container">
+            <div class="error-message" id="errorMessage"></div>
+
+            <form id="donationForm">
+                <div class="amount-section">
+                    <h3>Selecciona el monto a donar</h3>
+                    <div class="amount-buttons">
+                        <div class="amount-btn" data-amount="5000">$5.000</div>
+                        <div class="amount-btn" data-amount="10000">$10.000</div>
+                        <div class="amount-btn" data-amount="25000">$25.000</div>
+                        <div class="amount-btn" data-amount="50000">$50.000</div>
+                        <div class="amount-btn" data-amount="100000">$100.000</div>
+                        <div class="amount-btn" data-amount="250000">$250.000</div>
+                    </div>
+                    <input type="number" 
+                           class="custom-amount" 
+                           id="customAmount" 
+                           placeholder="O ingresa otro monto (mínimo $1.000)"
+                           min="1000">
                 </div>
-                <div class="section-right ">
-                    <h1>Nuestro Objetivo</h1>
-                    <p>Formar una organización formal y estructurada para prevenir el consumo de sustancias en niños, niñas y adolescentes de sectores vulnerables, generando un impacto social a través de la intervención temprana, la educación y el trabajo comunitario.</p>
+
+                <div class="donor-info">
+                    <h3>Información del donante (opcional)</h3>
+                    <div class="form-group">
+                        <label for="donorName">Nombre completo</label>
+                        <input type="text" id="donorName" placeholder="Tu nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="donorEmail">Correo electrónico</label>
+                        <input type="email" id="donorEmail" placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="donorPhone">Teléfono</label>
+                        <input type="tel" id="donorPhone" placeholder="+56 9 1234 5678">
+                    </div>
                 </div>
+
+                <button type="submit" class="donate-btn" id="donateBtn">
+                    🎁 Donar Ahora
+                </button>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Procesando tu donación...</p>
+                </div>
+            </form>
+
+            <div class="security-info">
+                <div>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTAwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0ZXh0IHg9IjUwIiB5PSIyMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNDQ3N2NlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudGVyIj5UcmFuc2Jhbms8L3RleHQ+PC9zdmc+" alt="Transbank">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjAgNEMxMS4xNjM0IDQgNCA5LjE2MzQgNCAyMEM0IDMwLjgzNjYgMTEuMTYzNCAzNiAyMCAzNkMyOC44MzY2IDM2IDM2IDMwLjgzNjYgMzYgMjBDMzYgOS4xNjM0IDI4LjgzNjYgNCAyMCA0WiIgZmlsbD0iIzRDQUY1MCIvPjxwYXRoIGQ9Ik0xNiAyMEwyMCAyNEwyNiAxNiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=" alt="Seguro">
+                </div>
+                <p>Pago 100% seguro procesado por Transbank Chile</p>
             </div>
         </div>
+    </div>
 
-
-        <div class="section section-height-lg section-left-right-padding-md section-content-align-center section-bg-color-b2">
-            <!-- <div class="section-team-title">
-                <h2>Nuestro equipo</h2>
-            </div> -->
-            <div class = "section-container">
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 1</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 2</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img-round">
-                        <img src="https://www.placehold.co/500x500" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h1>Miembro 3</h1>
-                    </div>
-                    <div class="card-subtitle">
-                        <h4>Miembro</h4>
-                    </div>
-                </div>
-                <!--  -->
-            </div>
-        </div>
-
-        <div class="section section-height-lg section-left-right-padding-md section-content-align-center section-bg-color-b2">
-            <div class="card">
-                <div class="card-img-round">
-                    <img src="https://www.placehold.co/500x500" alt="">
-                </div>
-                <div class="card-title">
-                    <h1 style="color: var(--color-brown-2)">Director 1</h1>
-                </div>
-                <div class="card-subtitle"> 
-                    <h4 style="color: var(--color-brown-2)">CEO</h4>
-                </div>
-            </div>
+        <div class="donation-section">
+            <form action="Donations/create" method="POST">
+                <input type="text" name="name" placeholder="Nombre Completo">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="phone" placeholder="Teléfono">
+                <input type="number" name="amount" placeholder="Monto a donar">
+                <label>
+                    <input type="checkbox" name="is_anon" value="1"> Donación anónima
+                </label>
+                <button type="submit" class="btn btn-md btn-dono btn-hover">Realizar Donación</button>
+            </form>
         </div>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
-            <div class="footer-left footer-section-style">
+            <div class="footer-left">
                 <h2>Links</h2>
-                <ul class="list list-vert">
+                <ul>
                     <li>
                         <a href="">Preguntas frecuentes</a>
                     </li>
@@ -153,21 +148,38 @@ Cinco personas, amigos desde los 15 años, participaron en el voluntariado “Cr
                 </ul>
 
             </div>
-            <div class="footer-center footer-section-style">
+            <div class="footer-center">
                 <p>Fundación Vínculos Urbanos</p>
                 <p>Desarrollado por Daniel R, Camila V, Samuel C</p>
 
-            </div>
-            <div class="footer-right footer-section-style">
-                <img style="max-width: 150px;" src="..\public\assets\images\img\logos\logo.png" alt="">
-                <a href="../src/Views/donation_view.php">
-                    <button class="btn btn-md btn-dono btn-hover">Donar</button>
-                </a>
-                
             </div>
         </div>
     </footer>
     <script src="\public\assets\css\main.css"></script>
 </body>
-</html>    
-    
+</html>
+
+<?php
+            // require '../Models/db.php';
+
+            // // se crea la instancia de la base de datos
+            // $db = new Database();
+
+            // // Example usage
+            // try {
+            //     // Check connection
+            //     if ($db->isConnected()) {
+            //         // Simple query without parameters
+            //         $allUsers = $db->query("SELECT * FROM donor_user");
+            //     }
+            // } catch (PDOException $e) {
+            //     // Handle errors
+            //     error_log($e->getMessage());
+            //     echo "Database error occurred";
+            // }
+
+            // foreach($allUsers as $user){
+            //     foreach($user as $user_item)
+            //         echo($user_item);
+            // }
+?>

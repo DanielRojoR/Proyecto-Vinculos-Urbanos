@@ -37,7 +37,7 @@ class Database{
             $dsn = sprintf(
                 "mysql:host=%s;dbname=%s;charset=utf8mb4",
                 $_ENV['DB_HOST'],
-                $_ENV['DB_NAME']
+                $_ENV['DB_DATABASE']
             );
 
             // Cambia el estado de la variable 'connection' para que ahora si contenga la instancia de la db y maneja cualquier potencial error

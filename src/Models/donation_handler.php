@@ -1,15 +1,20 @@
 <?php
-// config/transbank.php
-require_once '../../vendor/autoload.php';
-require_once __DIR__ . '/db.php';
 
-Dotenv\Dotenv::createImmutable(__DIR__ . '/../..')->safeLoad();
+#IMPORTANTE, NO OLVIDAR CONFIGURAR WEBPAY PARA PRODUCCION CUANDO SE LANCE LA PAGINA
+
+// config/transbank.php
+require_once __DIR__ . '/../../vendor/autoload.php';
+// require_once __DIR__ . '/Donations.php';
+
+// Load environment variables
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
+$dotenv->safeLoad();
 
 
 use Transbank\Webpay\WebpayPlus;
 use Transbank\Webpay\WebpayPlus\Transaction;
 
-class TransbankDonationService {
+class donation_handler {
     
     private $commerceCode;
     private $apiKeySecret;
@@ -19,19 +24,8 @@ class TransbankDonationService {
         // Configuración para integración (ambiente de pruebas)
         $this->commerceCode = '597055555532';
         $this->apiKeySecret = '579B532A7440BB0C9079DED94D31EA1615BACEB56610332264630D42D0A36B1C';
-        $this->environment = 'integration'; // 'integration' o 'production'
-        
-        $this->configureWebpay();
+        $this->environment = $_ENV['TBK_ENVIROMENT']; // 'integration' o 'production'
     }
-    
-    private function configureWebpay() {
-        if ($this->environment === 'integration') {
-            WebpayPlus::configureForIntegration($this->commerceCode, $this->apiKeySecret);
-        } else {
-            WebpayPlus::configureForProduction($this->commerceCode, $this->apiKeySecret);
-        }
-    }
-    
     /**
      * Crear una transacción de donación
      */
@@ -46,14 +40,14 @@ class TransbankDonationService {
             $sessionId = "SESS_" . $uniqueId;
             
             // URL de retorno después del pago
-            $returnUrl = $this->getBaseUrl() . '/donation/confirm';
+            $returnUrl = $this->getBaseUrl() . '/confirm';
             
             // Crear la transacción
             $transaction = new Transaction();
             $response = $transaction->create($buyOrder, $sessionId, $amount, $returnUrl);
 
             // Guardar datos de la donación en base de datos
-            $this->saveDonationData($buyOrder, $amount, $donorData, $response->getToken());
+            // $this->saveDonationData($buyOrder, $amount, $donorData, $response->getToken());
             
             return [
                 'success' => true,
@@ -105,9 +99,9 @@ class TransbankDonationService {
      */
 private function saveDonationData($buyOrder, $amount, $donorData, $token) {
     try {
-        $db = new Database();
+        $donation = new Donations();
         
-        $query = "INSERT INTO vinculosurbanosdb.donor_user 
+        $query = "INSERT INTO vinculosurbanosdb.donations 
                 (buy_order, full_name, email, phone, token, is_anon) 
                 VALUES (?, ?, ?, ?, ?, ?)";
         
@@ -120,7 +114,7 @@ private function saveDonationData($buyOrder, $amount, $donorData, $token) {
             $donorData['is_anon'] ?? 0    // Default to 0 if not set
         ];
         
-        return $db->execute($query, $params);
+        return $donation->execute($query, $params);
         
     } catch (PDOException $e) {
         error_log("Error saving donation data: " . $e->getMessage());
@@ -163,19 +157,16 @@ private function saveDonationData($buyOrder, $amount, $donorData, $token) {
 // Ejemplo de uso básico:
 
 // Para crear una donación:
-$donationService = new TransbankDonationService();
-$result = $donationService->createDonation(100000000, [
-    'name' => 'Juan Pérez',
-    'email' => 'juan@email.com',
-    'phone' => '+56912345678'
-]);
+// $donationService = new donation_handler();
+// $result = $donationService->createDonation(1000000000, [
+//     'name' => 'Juan Pérez',
+//     'email' => 'juan@email.com',
+//     'phone' => '+56912345678'
+// ]);
 
-if ($result['success']) {
-    // Redirigir al usuario a Transbank
-    header('Location: ' . $result['url'] . '?token_ws=' . $result['token']);
-} else {
-    echo 'Error: ' . $result['error'];
-}
-
-
-?>
+// if ($result['success']) {
+//     // Redirigir al usuario a Transbank
+//     header('Location: ' . $result['url'] . '?token_ws=' . $result['token']);
+// } else {
+//     echo 'Error: ' . $result['error'];
+// }
